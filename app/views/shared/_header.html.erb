@@ -1,0 +1,29 @@
+<header>
+
+<div class="top-page-header">
+  <div class=header-content>
+    <%= link_to 'Stearch!', root_path, class:"header-title" %>
+  
+  
+  <ul class="header-list">
+    <% if user_signed_in? %>
+      <li class="header-login">
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %>
+      </li>
+      <li class="header-new">
+        <%= link_to 'マイページ',"/users/#{current_user.id}", class: "user-nickname" %>
+      </li>
+
+    <% else %>
+      <li class="header-login">
+        <%= link_to 'ログイン', new_user_session_path, class:"login" %>
+      </li>
+      <li class="header-new">
+        <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+</div>
+
+</header>

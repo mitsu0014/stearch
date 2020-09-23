@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+<div class="mypage-content">
+  <div class="mypage-title">
+   <%= @nickname %>さんのマイページ
+  </div>
+  <div class="mypage-wrap">
+    <div class="mypage-link">
+      <div class="mypage-link-new">
+        <%=link_to '公演情報を登録する', new_performance_path %>
+      </div>
+   </div>
+   <p>登録した公演</p>
+   <% @performances.each do |p| %>
+     <li>
+       <%= p.title %>
+       <%= p.group %>
+     </li>
+   <% end %>
+  </div>
+</div>
+
+<%= link_to "もどる", :back %>
+<%= render "shared/footer" %>

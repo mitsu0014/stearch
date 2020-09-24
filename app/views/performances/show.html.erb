@@ -26,7 +26,7 @@
         </tr>
         <tr>
           <th class="detail-performance">チケット詳細</th>
-          <td class="detail-value"><%= @performance.url %></td>
+          <td class="detail-value"><%= raw Rinku.auto_link(@performance.url, :all, 'target="_blank"') %>
         </tr>
       </tbody>
     </table>

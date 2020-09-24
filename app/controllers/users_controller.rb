@@ -4,3 +4,4 @@ class UsersController < ApplicationController
     @performances = current_user.performances
   end
 end
+

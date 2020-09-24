@@ -1,6 +1,6 @@
 class PerformancesController < ApplicationController
 before_action :search_stage, only: [:index, :search]
-before_action :set_performance, only: [:show, :edit]
+before_action :set_performance, only: [:show, :edit, :update, :destroy]
 
   def index
     @performances = Performance.all
@@ -16,8 +16,9 @@ before_action :set_performance, only: [:show, :edit]
 
   def create
     @performance = Performance.new(performance_params)
-    if @performance.save
-      redirect_to "/users/#{current_user.id}"
+    if @performance.valid? 
+       @performance.save
+       redirect_to "/users/#{current_user.id}"
     else
       render :new
     end
@@ -30,9 +31,20 @@ before_action :set_performance, only: [:show, :edit]
   end
 
   def update
+    @performance.update(performance_params)
+    if @performance.valid?
+      redirect_to performance_path(@performance.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    if @performance.destroy
+      redirect_to "/users/#{current_user.id}"
+    else
+      render :index
+    end
   end
 
   private

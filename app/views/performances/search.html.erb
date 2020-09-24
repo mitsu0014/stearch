@@ -9,14 +9,20 @@
     <td>
     <br>
     <li>
+    <%= link_to performance_path(result.id) do%>
        <%# <%= result.image%>
+       【タイトル】
        <%= result.title %>
+       【団体】
        <%= result.group %>
+       【ジャンル】
        <%= result.genre.name %>
+       【エリア】
        <%= result.area.name %>
-       <%= result.start_date %>
+       【公演期間】
+       <%= result.start_date %>〜
        <%= result.end_date %>
-       <%= result.url %>
+    <% end %>
     </li>
   <% end %>
 <% else %>

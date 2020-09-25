@@ -1,5 +1,6 @@
 .footer-content {
-  height: 300px;
+  width: 100vw;
+  height: 200px;
   background-color: grey;
   display: flex;
   justify-content: center;

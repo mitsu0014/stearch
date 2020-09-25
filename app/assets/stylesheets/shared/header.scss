@@ -1,0 +1,98 @@
+.top-page-header {
+  width: 100vw;
+   height: 100px;
+   align-items: center;
+   display: flex;
+   background: image-url('banner-1391996_1920.jpg');
+   background-size: cover;
+   background-blend-mode:lighten;
+   position: absolute;
+   position: fixed;
+   opacity: 0.9;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+}
+
+.header-logo {
+  width: 210px;
+  height: 92px;
+  margin: 10px;
+  padding-left: 15px;
+}
+
+.header-logo:hover {
+  border: solid 1px #df7163;
+}
+
+.header-logo:active {
+  background-color: #df7163;
+}
+
+.header-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-list li {
+  opacity: 0.8;
+  background-color: #df7163;
+  padding: 20px;
+  margin: 15px;
+}
+
+.header-list li:hover {
+  opacity: 1;
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+}
+
+.logout:active {
+  padding-top:6px;
+  padding-bottom:4px;
+  background-color: #ff9999;
+  color:#e0ebf5;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: white;
+}
+
+.sign-up:active {
+  padding-top:6px;
+  padding-bottom:4px;
+  background-color: #ff9999;
+  color:#e0ebf5;
+}
+
+.login {
+  text-decoration: none;
+  color: white;
+}
+
+.login:active {
+  padding-top:6px;
+  padding-bottom:4px;
+  background-color: #ff9999;
+  color:#e0ebf5;
+}
+
+.user-nickname {
+  text-decoration: none;
+  color: white;
+}
+.user-nickname:active {
+  padding-top:6px;
+  padding-bottom:4px;
+  background-color: #ff9999;
+  color:#e0ebf5;
+}

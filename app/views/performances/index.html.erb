@@ -1,37 +1,42 @@
 <%= render "shared/header" %>
+
 <div class="search-page">
   <div class="main-title">
-    <h1>詳細検索</h1>
+    <h1>検索条件を絞り込もう！</h1>
   </div>
   <div class="search-content">
     <%= search_form_for @p, url: performances_search_path do |f| %>
      <div class="search-wrap">
        <div class="search-form-label">
-         <%= f.label :title_eq, '公演タイトルを指定' %>
+        <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+         <%= f.label :title_eq, '公演タイトルのキーワード' %>
        </div>
        <div class="search-form">
-         <%= f.search_field :title_cont, placeholder: "例）ロミオとジュリエット"%>
+         <%= f.search_field :title_cont, placeholder: "例）ロミオとジュリエット", class:"text-search"%>
        </div>
      </div>
      <div class="search-wrap">
        <div class="search-form-label">
-         <%= f.label :group_eq, '団体を指定' %>
+        <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+         <%= f.label :group_eq, '団体のキーワード' %>
        </div>
        <div class="search-form">
-         <%= f.search_field :group_cont,  placeholder: "例）劇団シェイクスピア"%>
+         <%= f.search_field :group_cont,  placeholder: "例）劇団シェイクスピア",class:"text-search"%>
        </div>
      </div>
      <div class="search-wrap">
        <div class="search-form-label">
+        <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
          <%= f.label :genre_id_eq, 'ジャンル' %>
        </div>
          <div class="search-form">
            <%= f.collection_select :genre_id_eq, @genre, :id, :name, {include_blank: '--'}, class:"select-box", id:"genre-name" %>
          </div>
-       </div>
+     </div>
        <div class="search-wrap">
          <div class="search-form-label">
-           <%= f.label :area_id_eq, 'エリア（東京都)' %>
+          <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+           <%= f.label :area_id_eq, 'エリア（東京都)'%>
          </div>
          <div class="search-form">
            <%= f.collection_select :area_id_eq, @area, :id, :name, {include_blank: '--'}, class:"select-box", id:"area-name" %>
@@ -39,6 +44,7 @@
        </div>
        <div class="search-wrap">
          <div class="search-form-label">
+          <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
            <%= f.label :price_name_eq, 'チケット価格' %>
          </div>
          <div class="search-radio">
@@ -60,39 +66,40 @@
        </div>
        <div class="search-wrap">
          <div class="search-form-label">
+          <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
            期間
          </div>
-         <div class="search-form">
-           <%= f.date_field :start_date_gteq, placeholder: "" %>〜
-           <%= f.date_field :end_date_lteq, placeholder: "" %>
+         <div class="date-search-form">
+           <%= f.date_field :start_date_gteq, placeholder: "" ,class:"date-form"%><div class="wave">〜</div>
+           <%= f.date_field :end_date_lteq, placeholder: "" ,class:"date-form"%>
          </div>
        </div>
-       <div class="search-form">
-         <p><%= f.select( :sorts, { '並び替え': 'id desc', '価格の安い順': 'price asc', '価格の高い順': 'price desc', '登録の古い順': 'updated_at asc', '登録の新しい順': 'updated_at desc' } , { onchange: 'this.form.submit()'} ) %></p>
+       <div class="change-form">
+         <p><%= f.select( :sorts, { '並び替え': 'id desc', '価格の安い順': 'price asc', '価格の高い順': 'price desc', '登録の古い順': 'updated_at asc', '登録の新しい順': 'updated_at desc' } , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
        </div>
        <div class="search-btn">
-         <%= f.submit '検索する' %>
+        <%= image_tag('search.png', class:"search-logo", alt:"search")%>
+         <%= f.submit '検索する', class:"search-btn-content"%>
        </div>
-    </div>
+  </div>
 
     <div>
     <%# 公演一覧 %>
-      <% @performances.each do |performance| %>
-      <td>
-      <br>
-      <li>
-        <%= performance.title %>
-        <%= performance.group %>
-        <%= performance.genre.name %>
-        <%= performance.area.name %>
-      </li>
-      <% end %>
-    </div>
+      <%# <% @performances.each do |performance| %>
+      <%# <td> %>
+      <%# <br> %>
+      <%# <li> %>
+        <%# <%= performance.title %>
+        <%# <%= performance.group %>
+        <%# <%= performance.genre.name %>
+        <%# <%= performance.area.name %>
+      <%# </li> %>
+      <%# <% end %>
+    <%# </div> %>
 
   <% end %>
- </div>
 </div>
-
+</div>
 
 
 

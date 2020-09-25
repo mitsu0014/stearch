@@ -21,16 +21,15 @@
 .header-logo {
   width: 210px;
   height: 92px;
-  margin: 10px;
-  padding-left: 15px;
+  margin: 10px 0 10px 30px;
 }
 
 .header-logo:hover {
-  border: solid 1px #df7163;
+  border: solid 1px #ec6d71;
 }
 
 .header-logo:active {
-  background-color: #df7163;
+  background-color: #ec6d71;
 }
 
 .header-list {
@@ -41,9 +40,11 @@
 
 .header-list li {
   opacity: 0.8;
-  background-color: #df7163;
+  background-color: #ec6d71;
   padding: 20px;
   margin: 15px;
+  height: 65px;
+  width: 120px;
 }
 
 .header-list li:hover {
@@ -53,12 +54,13 @@
 .logout {
   text-decoration: none;
   color: white;
+  
 }
 
 .logout:active {
   padding-top:6px;
   padding-bottom:4px;
-  background-color: #ff9999;
+  background-color: #ec6d71;
   color:#e0ebf5;
 }
 
@@ -70,7 +72,7 @@
 .sign-up:active {
   padding-top:6px;
   padding-bottom:4px;
-  background-color: #ff9999;
+  background-color: #ec6d71;
   color:#e0ebf5;
 }
 
@@ -82,7 +84,7 @@
 .login:active {
   padding-top:6px;
   padding-bottom:4px;
-  background-color: #ff9999;
+  background-color: #ec6d71;
   color:#e0ebf5;
 }
 
@@ -93,6 +95,6 @@
 .user-nickname:active {
   padding-top:6px;
   padding-bottom:4px;
-  background-color: #ff9999;
+  background-color: #ec6d71;
   color:#e0ebf5;
 }

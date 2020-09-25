@@ -1,9 +1,16 @@
 .search-page {
- padding-top: 100px;
+ padding: 150px 0 100px 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
 }
 
 .main-title {
   padding: 20px 20px 0 20px;
+  display: flex;
+  justify-content: center;
+  color: #555555;
 }
 
 .search-content {
@@ -18,16 +25,127 @@
 }
 
 .search-form-label {
+  font-size: 20px;
+  color: #555555;
+  display: flex;
+  padding: 10px;
+}
 
+.pen-logo {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.text-search {
+  width: 300px;
+  height: 50px;
+  padding-left: 20px;
+  margin: 0 0 10px 48px;
+}
+
+.select-box {
+  width: 300px;
+  height: 50px;
+  padding-left: 20px;
+  margin: 0 0 10px 48px;
 }
 
 .search-form {
-
 }
 
 .search-radio {
+  font-size: 20px;
+  margin: 0 50px 10px 48px;
+}
+
+.date-form {
+  width: 300px;
+  height: 50px;
+  padding-left: 20px;
+  margin: 0 0 10px 48px;
+}
+
+.date-search-form {
+  display: flex;
+}
+
+.wave {
+font-size: 30px;
+
+}
+
+.change-form {
+  margin-top: 40px;
+}
+
+.change-pulldown {
+  width: 200px;
+  height: 30px;
+  padding-left: 20px;
+  margin: 0 0 10px 48px;
+}
+
+.search-logo {
+  width: 70px;
+  padding: 10px 10px 0 0;
 }
 
 .search-btn {
-
+margin-top: 30px;
+display: flex;
+justify-content: center;
 }
+
+.search-btn-content {
+	display: block;
+	position: relative;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	background: #ec6d71;
+        border-radius: 30px;
+	border:1px solid #ec6d71;
+	 -webkit-backface-visibility: hidden; 
+	-moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .search-btn-content:hover {
+     cursor: pointer;
+     text-decoration: none;
+    -webkit-animation: simple_square_btn6 0.5s both;
+    -moz-animation: simple_square_btn6 0.5s both;
+            animation: simple_square_btn6 0.5s both;
+  }
+  @-webkit-keyframes simple_square_btn6 {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
+  @-moz-keyframes simple_square_btn6 {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
+  @keyframes simple_square_btn6 {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+    }
+  }
+  

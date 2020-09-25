@@ -1,8 +1,18 @@
 .footer-content {
   width: 100vw;
-  height: 200px;
-  background-color: grey;
+  height: 120px;
+  background-color: #555555;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+}
+
+.footer-image {
+  width: 70px;
+}
+
+.footer-text {
+  color: white;
+  font-size: 10px;
 }

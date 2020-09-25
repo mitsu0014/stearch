@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-
+<div class="detail-content">
 <%# <%= image_tag @performance.image %>
 
 <%= @performance.title %>
@@ -42,5 +42,5 @@
 <%= link_to 'マイページにもどる', "/users/#{current_user.id}" %>
   <%= link_to 'トップページにもどる', root_path %>
 
-
+</div>
 <%= render "shared/footer" %>

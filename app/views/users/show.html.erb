@@ -5,22 +5,25 @@
    <%= @nickname %>さんのマイページ
   </div>
   <div class="mypage-wrap">
-    <div class="mypage-link">
       <div class="mypage-link-new">
-        <%=link_to '公演情報を登録する', new_performance_path %>
+        <%=link_to '公演情報を登録する', new_performance_path, class:"link-new-btn" %>
       </div>
-   </div>
-   <p>登録した公演</p>
-   <% @performances.each do |p| %>
-     <li class="list">
-       <%= link_to performance_path(p.id) do%>
-         <%# <%= image_tag url_for(p)%>
-         <%= p.title %>
-         <%= p.group %>
-       <% end %>
-     </li>
-   <% end %>
+      <div class="my-performances">
+        <div class="my-performances-title">
+        <%= image_tag('performance.png', class:"performance-logo", alt:"performance")%>
+           登録した公演
+           </div>
+           <% @performances.each do |p| %>
+             <li class="list">
+               <%= link_to performance_path(p.id) do%>
+                 <%# <%= image_tag url_for(p)%>
+                 <%= p.title %>
+                 <%= p.group %>
+               <% end %>
+             </li>
+           <% end %>
+       </div>
   </div>
+  <%= link_to 'トップページにもどる', root_path, class:"back-home" %>
 </div>
-  <%= link_to 'トップページにもどる', root_path %>
 <%= render "shared/footer" %>

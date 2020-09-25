@@ -1,3 +1,76 @@
 .mypage-content {
-  padding-top: 100px;
+  padding: 150px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mypage-title {
+  padding: 20px 20px 0 20px;
+  color: #555555;
+  font-size: 30px;
+}
+
+.mypage-wrap {
+  background-color: #f8f8f8;
+  margin: 30px 0;
+  padding: 30px 0;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mypage-link-new {
+  margin: 15px 0;
+}
+
+.link-new-btn {
+  display: block;
+	width: 200px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	background: #ec6d71;
+        border-radius: 30px;
+	border:1px solid #ec6d71;
+  }
+  
+  .link-new-btn:hover {
+    opacity: 0.8;
+  } 
+
+  .link-new-btn:active {
+    background-color: #ec6d71;
+    color:#e0ebf5;
+  }
+
+.my-performances {
+  margin: 20px;
+}
+
+.performance-logo {
+  width: 30px;
+  margin-right: 10px;
+  position: absolute;
+  right: 250px;
+}
+
+.my-performances-title {
+  color: #555555;
+  font-size: 20px;
+  display: flex;
+  position: relative;
+}
+
+.list  {
+  list-style: none;
+  padding: 10px;
+}
+
+.back-home {
+margin-top: 50px;
 }

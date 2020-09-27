@@ -1,6 +1,8 @@
 <%= render "shared/header" %>
 <div class="sign-up-content">
-<h2>新規登録</h2>
+  <div class="sign-up-title">
+    <h2>新規登録</h2>
+  </div>
 
 <%= form_with(model: @user,  url: user_registration_path, class: "registration-main", local:true)  do |f| %>
   <%= render "shared/error_messages", model: f.object %>
@@ -10,7 +12,7 @@
       <label class="form-text">ユーザーネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname" %>
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname",class:"sign-up-form" %>
   </div>
  
   <div class="field">
@@ -18,18 +20,15 @@
       <label class="form-text">メールアドレス</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-up-form",placeholder:"stearch@email.com" %>
   </div>
 
   <div class="field">
     <div class="form-text-wrap">
       <label class="form-text">パスワード</label>
       <span class="indispensable">必須</span>
-      <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> 文字以上)</em>
-      <% end %><br />
     </div>
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password",class:"sign-up-form",placeholder:'６文字以上' %>
   </div>
 
   <div class="field">
@@ -37,15 +36,15 @@
       <label class="form-text">パスワード(確認)</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"sign-up-form" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "登録する", class:"sign-up-btn" %>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
-
+  <%= link_to 'トップページにもどる', root_path, class:"back-home" %>
+  
 </div>
 <%= render "shared/footer" %>

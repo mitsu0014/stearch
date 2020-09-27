@@ -1,3 +1,11 @@
 .sign-in-content {
-  padding-top: 100px;
+  padding-top: 150px 0 100px 0;
+}
+
+.remenber_me {
+  color: #555555;
+}
+
+.check-box {
+  margin-left: 40px;
 }

@@ -1,46 +1,57 @@
 <%= render "shared/header" %>
 
 <div class="detail-content">
-<%# <%= image_tag @performance.image %>
 
-<%= @performance.title %>
-<%= @performance.group %>
-<%= @performance.price1 %>
-<%= @performance.price2 %>
-<%= @performance.price3 %>
-<%= @performance.price4 %>
-<%= @performance.price5 %>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-performance">ジャンル</th>
-          <td class="detail-value"><%= @performance.genre.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-performance">エリア(東京都)</th>
-          <td class="detail-value"><%= @performance.area.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-performance">開演時間詳細</th>
-          <td class="detail-value"><%= @performance.start_at%></td>
-        </tr>
-        <tr>
-          <th class="detail-performance">チケット詳細</th>
-          <td class="detail-value"><%= raw Rinku.auto_link(@performance.url, :all, 'target="_blank"') %>
-        </tr>
-      </tbody>
-    </table>
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-performance">公演名</th>
+        <td class="detail-value"><%= @performance.title %></td>
+      </tr>
+      <tr>
+        <th class="detail-performance">団体名</th>
+        <td class="detail-value"><%= @performance.group %></td>
+      </tr>
+      <tr>
+        <th class="detail-performance">ジャンル</th>
+        <td class="detail-value"><%= @performance.genre.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-performance">エリア(東京都)</th>
+        <td class="detail-value"><%= @performance.area.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-performance">チケット料金</th>
+        <td class="detail-value">
+          <%= @performance.price1 %>
+          <%= @performance.price2 %>
+          <%= @performance.price3 %>
+          <%= @performance.price4 %>
+          <%= @performance.price5 %></td>
+      </tr>
+      <tr>
+        <th class="detail-performance">開演時間</th>
+        <td class="detail-value"><%= @performance.start_at%></td>
+      </tr>
+      <tr>
+        <th class="detail-performance">チケット購入先</th>
+        <td class="detail-value"><%= raw Rinku.auto_link(@performance.url, :all, 'target="_blank"') %>
+      </tr>
+    </tbody>
+  </table>
 
 
+  <div class="edit-dest">
+    <% if user_signed_in? && current_user.id == @performance.user.id %>
+      <%= link_to '情報の編集', edit_performance_path, method: :get, class:"edit-btn" %>
+      <%= link_to '削除', performance_path(@performance.id), method: :delete, class:'destroy-btn' %>
+    <% end %>
+  </div>
 
   <% if user_signed_in? && current_user.id == @performance.user.id %>
-    <%= link_to '情報の編集', edit_performance_path, method: :get, class:"performance-red-btn" %>
-    <p class='or-text'>or</p>
-    <%= link_to '削除', performance_path(@performance.id), method: :delete, class:'item-destroy' %>
+    <%= link_to 'マイページにもどる', "/users/#{current_user.id}",class: "mypage-back" %>
   <% end %>
-
-<%= link_to 'マイページにもどる', "/users/#{current_user.id}" %>
-  <%= link_to 'トップページにもどる', root_path %>
+  <%= link_to 'トップページにもどる', root_path,class: 'back-btn' %>
 
 </div>
 <%= render "shared/footer" %>

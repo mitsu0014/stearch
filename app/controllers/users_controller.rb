@@ -3,5 +3,6 @@ class UsersController < ApplicationController
     @nickname = current_user.nickname
     @performances = current_user.performances
   end
+
 end
 

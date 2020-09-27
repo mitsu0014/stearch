@@ -1,36 +1,70 @@
 <%= render "shared/header" %>
 
 <div class="search-result">
-<h2>
-  検索結果
-</h2>
-<%#検索結果の個数で条件分岐%>
-<% if @results.length !=0 %>
-  <% @results.each do |result| %>
-    <td>
-    <br>
-    <li>
-    <%= link_to performance_path(result.id) do%>
-       <%# <%= result.image%>
-       【タイトル】
-       <%= result.title %>
-       【団体】
-       <%= result.group %>
-       【ジャンル】
-       <%= result.genre.name %>
-       【エリア】
-       <%= result.area.name %>
-       【公演期間】
-       <%= result.start_date %>〜
-       <%= result.end_date %>
-    <% end %>
-    </li>
-  <% end %>
-<% else %>
- 該当する公演はありません
-<% end %>
-<br>
-<%= link_to 'トップページにもどる', root_path %>
+  <div class="search-title">
+    <h2>検索結果</h2>
+  </div>
 
+  <div class="results">
+  <%#検索結果の個数で条件分岐%>
+    <% if @results.length !=0 %>
+      <% @results.each do |result|%>
+           <%# <%= result.image%>
+         <ul>
+          <div class="result-content">
+           <li>
+             <div class="result-wrap">
+              【公演名】
+             </div>
+             <div class="result-name">
+               <%= result.title %>
+             </div>
+           </li>
+           <li>
+             <div class="result-wrap">
+              【団体】
+             </div>
+             <div class="result-name">
+               <%= result.group %>
+             </div>
+            </li>
+            <li>
+              <div class="result-wrap">
+              【公演期間】
+              </div>
+              <div class="result-name">
+                <%= result.start_date %>〜
+                <%= result.end_date %>
+              </div>
+            </li>
+            <li>
+              <div class="result-wrap">
+              【ジャンル】
+              </div>
+              <div class="result-name">
+                <%= result.genre.name %>
+              </div>
+            </li>
+            <li>
+              <div class="result-wrap">
+              【エリア】
+              </div>
+              <div class="result-name">
+                <%= result.area.name %>
+              </div>
+            </li>
+            </div>
+            <div class="link-btn">
+              <%= link_to '詳細', performance_path(result.id) ,class:"link-show"%>
+            </div>
+          </ul>
+      <% end %>
+    <% else %>
+     該当する公演はありません
+    <% end %>
+  </div>
+
+    <%= link_to 'トップページにもどる', root_path, class: 'back-btn'%>
+    
 </div>
 <%= render "shared/footer" %>

@@ -88,3 +88,10 @@
            transform: scale(1.1);
  }
 }
+
+.not-find {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

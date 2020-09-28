@@ -91,12 +91,12 @@
         公演期間入力 <span class="indispensable-new-performance">必須</span>
       </div>
       <label class="control-label" for="">開演日</label>
-      <%= f.date_select :start_date, {include_blank: true, use_month_numbers: true}, class: 'form-control' %>
+      <%= f.date_select :start_date, {include_blank: true, use_month_numbers: true, start_year: 2020, end_year:2021}, class: 'form-control' %>
       <%# /開演日 %>
       <%# 終演日 %>
      <div class="new-content">
        <label class="control-label" for="">終演日</label>
-       <%= f.date_select :end_date, {include_blank: true, use_month_numbers: true}, class: 'form-control' %>
+       <%= f.date_select :end_date, {include_blank: true, use_month_numbers: true, start_year: 2020, end_year:2021}, class: 'form-control' %>
      </div>
    </div>
    <%# 終演日 %>

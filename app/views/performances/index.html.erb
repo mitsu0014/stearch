@@ -1,11 +1,12 @@
 <%= render "shared/header" %>
 
 <div class="search-page">
+ <%= search_form_for @p, url: performances_search_path do |f| %>
+
   <div class="main-title">
     <h1>検索条件を絞り込もう！</h1>
   </div>
   <div class="search-content">
-    <%= search_form_for @p, url: performances_search_path do |f| %>
      <div class="search-wrap">
        <div class="search-form-label">
         <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
@@ -75,7 +76,7 @@
          </div>
        </div>
        <div class="change-form">
-         <p><%= f.select( :sorts, { '並び替え': 'updated_at desc', '料金の安い順': 'price1 asc', '料金の高い順': 'price1 desc','初日の早い順': 'start_date desc','初日の遅い順': 'start_date asc'} , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
+         <p><%= f.select( :sorts, { '並び替え': 'updated_at desc', '料金の安い順': 'price1 asc', '料金の高い順': 'price1 desc','開演日の早い順': 'start_date desc','開演日の遅い順': 'start_date asc'} , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
        </div>
        <div class="search-btn">
         <%= image_tag('search.png', class:"search-logo", alt:"search")%>

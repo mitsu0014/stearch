@@ -1,8 +1,21 @@
 <%= render "shared/header" %>
 
 <div class="search-page">
- <%= search_form_for @p, url: performances_search_path do |f| %>
+  <%#今日の公演検索%>
+  <div class="today-search">
+     <%= search_form_for @p, url: performances_search_path do |f| %>
+     <%= image_tag('top.png', class:"top-logo", alt:"image")%>
+     <%= f.hidden_field :start_date_gteq,value: (f.object.start_date || Time.now.strftime("%Y-%m-%d")),class:"date-form"%>
+     <%= f.hidden_field :end_date_lteq, value: (f.object.end_date || Time.now.strftime("%Y-%m-%d")) ,class:"date-form"%>
+     <div class="hidden-search">
+         <%= f.submit '今日の公演を検索する',  class:"search-btn-today"%>
+         <%= image_tag('click.png', class:"click-logo", alt:"image")%>
+      </div>
+   </div>
+  <%end%>
+  <%#/今日の公演検索%>
 
+  <%= search_form_for @p, url: performances_search_path do |f| %>
   <div class="main-title">
     <h1>検索条件を絞り込もう！</h1>
   </div>
@@ -82,12 +95,8 @@
         <%= image_tag('search.png', class:"search-logo", alt:"search")%>
          <%= f.submit '検索する', class:"search-btn-content"%>
        </div>
-  </div>
-
-    <div>
-
+    </div>
   <% end %>
-</div>
 </div>
 
 

@@ -4,7 +4,6 @@
  justify-content: center;
  align-items: center;
  flex-direction: column;
- position: relative;
  min-height: 100vh;
 }
 
@@ -147,12 +146,41 @@ justify-content: center;
               transform: scale(1.1);
     }
   }
-  
-  .today-search {
-    display: flex;
-    justify-content: center;
+
+  .hidden-search {
+   margin-bottom: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
   }
 
-  .today-search-btn {
+  .search-btn-today {
+    margin-top: 20px; 
+    color: white;
+    background-color: #ec6d71;
+    border-bottom: 5px solid #c85554;
+    width: 250px;
+    height: 60px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
   
+  .search-btn-today:hover {
+    margin-top: 23px;
+    color: white;
+    background: #ec6d71;
+    border-bottom: 2px solid #c85554;
+    height: 57px;
+    cursor: pointer;
+  }
+
+  .click-logo {
+    width: 60px;
+    margin: 20px;
+    position: absolute;
+    left: 60px;
+    top: 30px;
   }

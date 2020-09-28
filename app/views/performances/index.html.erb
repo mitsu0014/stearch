@@ -12,8 +12,8 @@
          <%= f.submit '今日の公演を検索する',  class:"search-btn-today"%>
          <%= image_tag('click.png', class:"click-logo", alt:"image")%>
       </div>
+      <%end%>
    </div>
-  <%end%>
   <%#/今日の公演検索%>
 
   <%= search_form_for @p, url: performances_search_path do |f| %>

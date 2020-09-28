@@ -75,7 +75,7 @@
          </div>
        </div>
        <div class="change-form">
-         <p><%= f.select( :sorts, { '並び替え': 'id desc', '価格の安い順': 'price asc', '価格の高い順': 'price desc', '登録の古い順': 'updated_at asc', '登録の新しい順': 'updated_at desc' } , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
+         <p><%= f.select( :sorts, { '並び替え': 'updated_at desc', '料金の安い順': 'price1 asc', '料金の高い順': 'price1 desc','初日の早い順': 'start_date desc','初日の遅い順': 'start_date asc'} , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
        </div>
        <div class="search-btn">
         <%= image_tag('search.png', class:"search-logo", alt:"search")%>
@@ -84,18 +84,6 @@
   </div>
 
     <div>
-    <%# 公演一覧 %>
-      <%# <% @performances.each do |performance| %>
-      <%# <td> %>
-      <%# <br> %>
-      <%# <li> %>
-        <%# <%= performance.title %>
-        <%# <%= performance.group %>
-        <%# <%= performance.genre.name %>
-        <%# <%= performance.area.name %>
-      <%# </li> %>
-      <%# <% end %>
-    <%# </div> %>
 
   <% end %>
 </div>

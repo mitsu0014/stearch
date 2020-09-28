@@ -68,3 +68,8 @@ opacity: 1;
 .mypage-back {
 padding: 50px;
 }
+
+.show-image {
+  margin-bottom: 20px;
+  width: 35vw;
+}

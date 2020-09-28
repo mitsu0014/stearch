@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="performance-uproad-main">
-  <h1 class="performance-upload-title">公演登録ページ</h1>
+  <h1 class="performance-upload-title">公演編集ページ</h1>
 
   <%= form_with(model: @performance, local: true) do |f| %>
 
@@ -9,7 +9,7 @@
   
   <div class="new-perfoemance-content">
     <%# 公演画像 %>
-    <%# <div class="new-content">
+    <div class="new-content">
       <div class="weight-bold-text">
         公演画像
         <span class="indispensable-new-performance">必須</span>
@@ -19,9 +19,9 @@
         クリックして画像をアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
-        <%# <%= image_tag @performance, class: "perfoemance-image" if @performance.image.attached? %> 
-      <%# </div> %>
-    <%# </div> %>
+        <%= image_tag @performance, class: "perfoemance-image",alt:"image"%>
+      </div>
+    </div>
     <%# /公演画像 %>
     <%# 公演タイトル %>
     <div class="new-content">

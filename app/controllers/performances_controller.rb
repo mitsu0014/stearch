@@ -63,5 +63,4 @@ before_action :set_performance, only: [:show, :edit, :update, :destroy]
   def performance_params
     params.require(:performance).permit(:image, :title, :group, :genre_id, :area_id, :price1, :price2, :price3, :price4, :price5, :start_date, :end_date, :start_at, :url).merge(user_id: current_user.id)
   end
-
 end

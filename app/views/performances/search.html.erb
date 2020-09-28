@@ -9,9 +9,13 @@
   <%#検索結果の個数で条件分岐%>
     <% if @results.length !=0 %>
       <% @results.each do |result|%>
-           <%# <%= result.image%>
          <ul>
           <div class="result-content">
+          <%=image_tag result.image,alt:"image",class:"search-image"%>
+         <div class="link-btn">
+              <%= link_to '詳細', performance_path(result.id) ,class:"link-show"%>
+            </div>
+          <div class="name-list">
            <li>
              <div class="result-wrap">
               【公演名】
@@ -54,8 +58,6 @@
               </div>
             </li>
             </div>
-            <div class="link-btn">
-              <%= link_to '詳細', performance_path(result.id) ,class:"link-show"%>
             </div>
           </ul>
       <% end %>

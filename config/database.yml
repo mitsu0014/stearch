@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: stearch_production
-  username: stearch
-  password: <%= ENV['STEARCH_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

@@ -4,5 +4,8 @@ class UsersController < ApplicationController
     @performances = current_user.performances
   end
 
+  def a
+    redirect_to new_user_registration_path
+  end
 end
 

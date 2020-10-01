@@ -52,7 +52,7 @@
 }
 
 .search-radio {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0 50px 10px 48px;
 }
 
@@ -194,26 +194,41 @@ justify-content: center;
     display: none;
   }
 
-.today-search {
+ .today-search {
   min-height: 100vh;
-}
+ }
 
-.top-image {
-  display: none;
-}
+ .top-image {
+   display: none;
+ }
 
-.img-box {
-  position: relative;
-}
+#to-pagedown {
 
-.img-box .top-image-active {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: 0.5s;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	display: none;
 }
-
-.search-btn-today:hover .top-image-active {
-  opacity: 1;
+ 
+#to-pagedown a {
+	padding: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	display: block;
+	background-color: #004a7f;
+	color: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.8;
+}
+ 
+#to-pagedown a:hover {
+	background-color: #adddff;
+  color: #003459;
+  opacity: 0.8;
 }

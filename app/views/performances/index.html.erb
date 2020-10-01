@@ -4,10 +4,7 @@
   <div class="today-search">
      <%= search_form_for @p, url: performances_search_path do |f| %>
     <%#hoverで画像変換%>
-    <div class="img-box">
-        <%= image_tag('top1.png', class:"top-image",id:"top-image", alt:"image")%>
-        <%= image_tag('top2.png', class:"top-image-active",id:"top-image", alt:"image")%>
-    </div>
+        <%= image_tag('top_off.png', class:"top-image",id:"top-image", alt:"image")%>
      <%#今日の公演検索%>
      <%= f.hidden_field :end_date_gteq,value: (f.object.start_date || Time.now.strftime("%Y-%m-%d")),class:"date-form"%>
      <%= f.hidden_field :start_date_lteq, value: (f.object.end_date || Time.now.strftime("%Y-%m-%d")) ,class:"date-form"%>
@@ -19,6 +16,8 @@
       <%end%>
       <%#/今日の公演検索%>
    </div>
+
+   <p id="to-pagedown"><a>詳細検索へ</a></p>
 
   <%= search_form_for @p, url: performances_search_path do |f| %>
   <div class="main-title">
@@ -80,7 +79,7 @@
             <%= f.radio_button :price1_or_price2_or_price3_or_price4_or_price5_lteq, '10000'%>
             10000円以下
             <%= f.radio_button :price1_or_price2_or_price3_or_price4_or_price5_gteq, '10001'%>
-            10000円以上
+            10000円〜
          </div>
        </div>
        <div class="search-wrap">

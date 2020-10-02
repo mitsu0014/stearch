@@ -205,8 +205,8 @@ justify-content: center;
 #to-pagedown {
 
 	position: fixed;
-	right: 20px;
-	bottom: 20px;
+	right: 30px;
+	bottom: 30px;
 	display: none;
 }
  
@@ -216,7 +216,7 @@ justify-content: center;
 	font-weight: bold;
 	cursor: pointer;
 	display: block;
-	background-color: #004a7f;
+	background-color: yellowgreen;
 	color: #fff;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -224,7 +224,7 @@ justify-content: center;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
   transition: all 0.3s;
-  opacity: 0.8;
+  opacity: 0.9;
 }
  
 #to-pagedown a:hover {

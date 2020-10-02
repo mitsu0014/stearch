@@ -7,5 +7,4 @@ $(function() {
     $('#login-modal').fadeOut();
     $('#signup-modal').fadeOut();
   });
- 
 });

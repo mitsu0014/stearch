@@ -1,3 +1,40 @@
+ <nav class="navbar">
+    <%= image_tag('list.png', class:"data-menu-toggle", alt:"list")%>
+    <div class="navbar-menu" id="menu">
+      <div class="navbar-menu-overlay" data-menu-toggle>
+        <div class="navbar-menu-body">
+          <ul class="navbar-link-list">
+            <li class="navbar-link-item">
+              Stearch!（舞台公演検索）
+            </li>
+            <li class="navbar-link-item">
+              <a href="#">スティーチの使い方</a>
+            </li>
+            <li class="navbar-link-item">
+              <a href="#">ユーザー登録</a>
+            </li>
+            <li class="navbar-link-item">
+              <a href="#">ログイン</a>
+            </li>
+            <li class="navbar-link-item">
+              <a href="#">Q&A</a>
+            </li>
+            <li class="navbar-link-item">
+              <a href="#">不具合報告</a>
+            </li>
+          </ul>
+          <div class="close">
+            <button class="data-menu-toggle" id="close-btn">CLOSE</button>
+          </div>
+          <div class="usagi-image">
+            <%= image_tag('usagi.png',class:"navbar-usagi", alt: "usagi")%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
 <div class="top-page-header">
   <div class="top-page-header-image">
    <div class=header-content>

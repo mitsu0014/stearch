@@ -20,6 +20,11 @@ $(function() {
   $('.top-click').fadeIn(1000);
 },1000);
 
+setTimeout(function(){
+  $('.twitter').fadeIn(3000);
+},2500);
+
+
 
   $('a[href^="#"]').on("click", function (event) {
       var speed = 500;

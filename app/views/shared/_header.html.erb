@@ -7,21 +7,53 @@
             <li class="navbar-link-item">
               Stearch!（舞台公演検索）
             </li>
+            <% if user_signed_in? %>
+             <li class="navbar-link-item">
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+             <li class="navbar-link-item">
+              <%= link_to 'マイページ',"/users/#{current_user.id}"%>
+            </li>
+            <% else %>
+              <li class="navbar-link-item">     
+                <%= link_to 'ログイン', new_user_session_path%>
+              </li>
+              <li class="navbar-link-item">
+                <%= link_to '新規登録', new_user_registration_path %>
+              </li>
+            <% end %>
             <li class="navbar-link-item">
-              <a href="#">スティーチの使い方</a>
+              <a class="item-link">スティーチの使い方▽</a>
+              <ul class="sub-menu">
+               <li>
+               <p>なんとなく舞台がみたい</p>
+               <p>近くで今やってないかな</p>
+               <p>ふとそんなことを思った時</p>
+               <p>ワンクリックで検索できます。</p>
+               <p>条件を絞って検索もできます。</p>
+               <p>公演情報は</p>
+               <p>ユーザー登録をして</p>
+               <p>各団体が管理してください。</p>
+               </li>
+              </ul>
             </li>
             <li class="navbar-link-item">
-              <a href="#">ユーザー登録</a>
+              <a class="item-link">Q&A▽</a>
+              <ul class="sub-menu">
+                <p>Q.公演の登録はどうすれば？</p>
+                <p>A.ユーザー登録をしてください。</p>
+                <p>Q.登録画像が表示されない！</p>
+                <p>A.画像を小さくしてみてください。</p>
+                 <p>Q.舞台公演以外も登録できる？</p>
+                 <p>A.できます。でも幸せにはならないです。</p>
+              </ul>
             </li>
             <li class="navbar-link-item">
-              <a href="#">ログイン</a>
-            </li>
-            <li class="navbar-link-item">
-              <a href="#">Q&A</a>
-            </li>
-            <li class="navbar-link-item">
-              <a href="#">不具合報告</a>
-            </li>
+              <a class="item-link">問合せ・不具合報告▽</a>
+              <ul class="sub-menu">
+                <li>
+                 <p><%= mail_to 'info@butai-jin.com'%></p>
+                </li>
+              </ul>
           </ul>
           <div class="close">
             <button class="data-menu-toggle" id="close-btn">CLOSE</button>

@@ -5,9 +5,16 @@ $(function() {
     setTimeout(function(){
       $('#navi-under').fadeIn(3000);
     },2500);
+
+    $('.item-link').each(function(){
+      $(this).on('click',function(){
+          $("+.sub-menu",this).slideToggle();
+          return false;
+      });
+  });
 });
 
-//ハンバーガーメニュー
+//サイドメニュー
 document.addEventListener('DOMContentLoaded', () => {
   initMenu();
 });

@@ -170,7 +170,7 @@
 }
 
 .navbar-menu-body {
-  background-color: #fff;
+  background-color: #fffff0;
   height: 100vh;
   left: -240px;
   padding: 1rem;
@@ -200,7 +200,7 @@
   margin-top: 1rem;
   border-bottom: solid 1px #555555;
   opacity: 0.9;
-  width: 220px;
+  width: 250px;
 }
 
 .navbar-link-item a {
@@ -228,4 +228,18 @@
   padding-top: 50px;
   width: 200px;
   margin-left: 80px;
+}
+
+.sub-menu {
+ font-size:12px;
+ display: none;
+}
+
+.sub-menu p {
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.item-link {
+  cursor: pointer;
 }

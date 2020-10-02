@@ -45,7 +45,7 @@
   <div class="edit-dest">
     <% if user_signed_in? && current_user.id == @performance.user.id %>
       <%= link_to '情報の編集', edit_performance_path, method: :get, class:"edit-btn" %>
-      <%= link_to '削除', performance_path(@performance.id), method: :delete, class:'destroy-btn' %>
+      <div class="destroy-btn" id="destroy-btn">削除</div>
     <% end %>
   </div>
 
@@ -55,4 +55,22 @@
   <%= link_to 'トップページにもどる', root_path,class: 'back-btn' %>
 
 </div>
+<div class="login-modal-wrapper" id="login-modal">
+  <div class="modal">
+    <div class="close-model">
+      <i class="fa fa-times">✖️</i>
+    </div>
+    <div id="login-form">
+       <h2>公演を削除しますか？</h2>
+       <div>
+         <p>【公演名】<%= @performance.title %></p>
+         <p>【団体】<%= @performance.group %></p>
+       </div>
+       <div class="destroy-modal-wrap">
+        <%= link_to '削除する', performance_path(@performance.id), method: :delete, class:'destroy-btn-modal',id:"destroy-btn" %>
+        </div>
+     </div> 
+   </div>
+</div>
+
 <%= render "shared/footer" %>

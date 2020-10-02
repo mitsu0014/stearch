@@ -1,4 +1,14 @@
 $(function() {
+
+  $('#login-show').on('click',function() {
+    $('#login-modal').fadeIn();
+  });
+
+  $('.close-modal').on('click',function(){
+    $('#login-modal').fadeOut();
+    $('#signup-modal').fadeOut();
+  });
+
  $('#top-image').fadeIn(3000);
 
  setTimeout(function(){
@@ -20,17 +30,6 @@ $(function() {
       return false;
   });
 
-//   $('#top-image').each(function(){
-//     var src_off = $(this).find('image_tag').attr('src');
-//     var src_on = src_off.replace('_off','_on');
-//     $('<image_tag />').attr('src',src_on);
-//     $(this).on("mouseenter",function(event){
-//         $(this).find('image_tag').attr('src',src_on);
-//     },function(){
-//         $(this).find('image_tag').attr('src',src_off);
-//     }); 
-// });
-
 setTimeout(function(){
   $('#to-pagedown').fadeIn(2000);
 },1000);
@@ -48,6 +47,4 @@ $(window).on("scroll",function() {
    $('#to-pagedown a').on("click",function(){
    $('html,body').animate({scrollTop:800}, 'fast');
 	});
-
-
 });

@@ -1,7 +1,8 @@
 <div class="top-page-header">
-  <div class=header-content>
+  <div class="top-page-header-image">
+   <div class=header-content>
       <%= link_to image_tag('logo.png', class:"header-logo", alt:"タイトル"),"/"%>
-  <ul class="header-list">
+   <ul class="header-list">
     <% if user_signed_in? %>
       <li class="header-login">
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %>
@@ -9,14 +10,17 @@
       <li class="header-new">
         <%= link_to 'マイページ',"/users/#{current_user.id}", class: "user-nickname" %>
       </li>
-
     <% else %>
-      <li class="header-login">
-        <%= link_to 'ログイン', new_user_session_path, class:"login" %>
+      <li class="header-login">     
+        <%= link_to 'ログイン', new_user_session_path, class:"login" ,id:"login-show"%>
       </li>
       <li class="header-new">
         <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
       </li>
+    <% end %>
+    <% if current_page?(root_path) %>
+       <%= image_tag('navi.png', class:"header-navi",id:"header-navi", alt:"navi")%>
+       <p class="navi-under" id="navi-under">公演の登録はこちら<p>
     <% end %>
   </ul>
 </div>

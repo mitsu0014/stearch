@@ -13,16 +13,10 @@
   height: 70vh;
 }
 
-/* .detail-performance {
- 
-}
-
-.detail-value {
-
-} */
 
 .edit-dest {
 margin: 50px;
+display: flex;
 }
 
 .edit-btn {
@@ -46,7 +40,7 @@ margin: 50px;
 }
 
 .destroy-btn {
-  opacity: 0.8;
+ opacity: 0.8;
  background-color: #a9a9a9;
  padding: 20px;
  margin: 15px;
@@ -54,6 +48,8 @@ margin: 50px;
  width: 120px;
  text-decoration: none;
  color: white;
+ text-align: center;
+ cursor: pointer;
 }
 
 .destroy-btn:hover {
@@ -73,3 +69,59 @@ padding: 50px;
   margin-bottom: 20px;
   width: 35vw;
 }
+
+.login-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 999;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+.destroy-btn-modal {
+  opacity: 0.8;
+  background-color: #a9a9a9;
+  padding: 20px;
+  margin: 15px;
+  height: 65px;
+  width: 120px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.destroy-btn-modal:hover {
+  opacity: 1;
+  }
+
+  .destroy-modal-wrap {
+  margin-top: 30px;
+  }

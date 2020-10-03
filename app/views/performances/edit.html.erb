@@ -19,7 +19,7 @@
         クリックして画像をアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
-        <%= image_tag @performance, class: "perfoemance-image",alt:"image"%>
+        <%= image_tag @performance.image, class: "perfoemance-image",alt:"image"%>
       </div>
     </div>
     <%# /公演画像 %>

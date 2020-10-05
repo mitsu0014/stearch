@@ -12,7 +12,7 @@
   position: absolute;
   position: fixed;
   z-index: 99;
-  background-image: url(../header.jpg);
+  background-image: url(../background.jpg);
 }
 
 .header-logo {
@@ -133,7 +133,6 @@
  padding: 210px 15px 15px 15px;
  top: 5px;
  right: 15px;
- opacity: 0.9;
  border-radius: 20px;
  display: none;
 }

@@ -50,6 +50,6 @@ $(window).on("scroll",function() {
   });
  
    $('#to-pagedown a').on("click",function(){
-   $('html,body').animate({scrollTop:800}, 'fast');
+   $('html,body').animate({scrollTop:820}, 'fast');
   });
 });

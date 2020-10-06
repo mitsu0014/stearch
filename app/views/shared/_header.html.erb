@@ -74,8 +74,6 @@
    <div class=header-content>
       <%= link_to image_tag('logo.png', class:"header-logo", alt:"タイトル"),"/"%>
    <ul class="header-list">
-     <li class="gest-login">
-     </li>
     <% if user_signed_in? %>
       <li class="header-login">
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %>
@@ -84,6 +82,9 @@
         <%= link_to 'マイページ',"/users/#{current_user.id}", class: "user-nickname" %>
       </li>
     <% else %>
+    <li class="header-guest">
+      <%= link_to 'ゲスト様' , user_guest_sign_in_path, class:"guest-login" , method: :post %>
+     </li>
       <li class="header-login">     
         <div class="login login-show">ログイン</div>
       </li>

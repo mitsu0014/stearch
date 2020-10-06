@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'performances#index'
   get 'performances/search'
   get '/users' ,to: 'users#a'
-  post '/user/guest_sign_in', to: 'user#new_guest'
+  post '/user/guest_sign_in', to: 'users#new_guest'
 
   resources :performances
   resources :users, only: :show

@@ -77,3 +77,9 @@ gem 'ransack'
 gem 'rinku'
 gem 'rails-i18n'
 gem "aws-sdk-s3", require: false
+
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails'
+gem 'omniauth'

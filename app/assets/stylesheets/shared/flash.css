@@ -1,0 +1,14 @@
+.notice {
+  color: white;
+  background-color: #ec6d71;
+  text-align: center;
+  width: 100vw;
+  opacity: 0.9;
+}
+.alert {
+  color: white;
+  background-color: rgb(255, 51, 51);
+  text-align: center;
+  width: 100vw;
+  opacity: 0.9;
+}

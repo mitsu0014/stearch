@@ -30,3 +30,26 @@ function initMenu() {
     });
   });
 }
+
+$(function() {
+ $('.login-show').on('click',function(){
+  $('#modal-login').fadeIn();
+});
+
+ $('i').on('click',function(){
+  $('#modal-login').fadeOut();
+ });
+
+});
+
+ $(function() {
+  $('.signup-show').on('click',function(){
+   $('#modal-sign-up').fadeIn();
+ });
+ 
+  $('i').on('click',function(){
+   $('#modal-sign-up').fadeOut();
+  });
+
+});
+

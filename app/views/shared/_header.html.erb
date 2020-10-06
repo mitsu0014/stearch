@@ -1,4 +1,6 @@
- <nav class="navbar">
+
+<%#サイドメニュー%>
+<nav class="navbar">
     <%= image_tag('list.png', class:"data-menu-toggle", alt:"list")%>
     <div class="navbar-menu" id="menu">
       <div class="navbar-menu-overlay" data-menu-toggle>
@@ -15,10 +17,10 @@
             </li>
             <% else %>
               <li class="navbar-link-item">     
-                <%= link_to 'ログイン', new_user_session_path%>
+                <div class="login-show">ログイン</div>
               </li>
               <li class="navbar-link-item">
-                <%= link_to '新規登録', new_user_registration_path %>
+                <div class="signup-show">新規登録</div>
               </li>
             <% end %>
             <li class="navbar-link-item">
@@ -65,13 +67,15 @@
       </div>
     </div>
   </nav>
-
+<%#/サイドメニュー%>
 
 <div class="top-page-header">
   <div class="top-page-header-image">
    <div class=header-content>
       <%= link_to image_tag('logo.png', class:"header-logo", alt:"タイトル"),"/"%>
    <ul class="header-list">
+     <li class="gest-login">
+     </li>
     <% if user_signed_in? %>
       <li class="header-login">
         <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %>
@@ -81,10 +85,10 @@
       </li>
     <% else %>
       <li class="header-login">     
-        <%= link_to 'ログイン', new_user_session_path, class:"login" ,id:"login-show"%>
+        <div class="login login-show">ログイン</div>
       </li>
       <li class="header-new">
-        <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+        <div class="sign-up signup-show">新規登録</div>
       </li>
     <% end %>
     <% if current_page?(root_path) %>
@@ -93,4 +97,50 @@
     <% end %>
   </ul>
 </div>
+<%#新規登録モーダル%>
+<div class="login-modal-wrap" id="modal-sign-up">
+  <div class="modal">
+    <div class="close-model">
+       <i class="fa fa-times">✖️</i></div>
+       <div id="login-form">
+         <h2>ユーザー登録</h2>
+          <div class="modal-text">SNSアカウントで登録する</div>
+            <div class="sns-wrap">
+              <ul class="sns-btn">
+                <li><%= link_to 'Facebook', user_facebook_omniauth_authorize_path, class:"fb-btn" %></li>
+                <li><%= link_to 'Twitter', user_twitter_omniauth_authorize_path, class:"tw-btn" %></li>
+                <li><%= link_to 'Google', user_google_oauth2_omniauth_authorize_path, class:"go-btn" %></li>
+              </ul>
+            </div>
+            <div class="modal-mail-wrap">
+            <%= link_to 'メールアドレスで新規登録', new_user_registration_path, class: "modal-mail-btn" %>
+            </div>
+       </div>
+     </div>
+  </div>
 </div>
+<%#/新規登録モーダル%>
+<%#ログインモーダル%>
+<div class="login-modal-wrap" id="modal-login">
+<div class="modal">
+ <div class="close-model">
+      <i class="fa fa-times">✖️</i>
+    </div>
+      <div id="login-form">
+        <h2>ログイン</h2>
+          <div class="modal-text">SNSアカウントでログインする</div>
+            <div class="sns-wrap">
+              <ul class="sns-btn">
+                <li><%= link_to 'Facebook', user_facebook_omniauth_authorize_path, class:"fb-btn" %></li>
+                <li><%= link_to 'Twitter', user_twitter_omniauth_authorize_path, class:"tw-btn" %></li>
+                <li><%= link_to 'Google', user_google_oauth2_omniauth_authorize_path, class:"go-btn" %></li>
+              </ul>
+            </div>
+            <div class="modal-mail-wrap">
+            <%= link_to 'メールアドレスでログイン', new_user_session_path, class: "modal-mail-btn" %>
+            </div>
+        </div>
+      </div>
+   </div>
+</div>
+<%#/ログインモーダル%>

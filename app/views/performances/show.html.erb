@@ -40,6 +40,9 @@
       </tr>
     </tbody>
   </table>
+    <div id="likes_buttons_<%= @performance.id %>">
+        <%= render partial: 'likes/like', locals: { performance: @performance} %>
+    </div>
 
 
   <div class="edit-dest">
@@ -58,7 +61,7 @@
 <div class="login-modal-wrapper" id="login-modal">
   <div class="modal">
     <div class="close-model">
-      <i class="fa fa-times">✖️</i>
+      <div class="close-btn">✖️</div>
     </div>
     <div id="login-form">
        <h2>公演を削除しますか？</h2>

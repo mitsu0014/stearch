@@ -36,7 +36,7 @@ $(function() {
   $('#modal-login').fadeIn();
 });
 
- $('i').on('click',function(){
+ $('#i').on('click',function(){
   $('#modal-login').fadeOut();
  });
 
@@ -47,7 +47,7 @@ $(function() {
    $('#modal-sign-up').fadeIn();
  });
  
-  $('i').on('click',function(){
+  $('#i').on('click',function(){
    $('#modal-sign-up').fadeOut();
   });
 

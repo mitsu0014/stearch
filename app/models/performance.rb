@@ -2,6 +2,9 @@ class Performance < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :genre
   belongs_to_active_hash :area
+  belongs_to :user
+  has_one_attached :image
+  has_many :likes
 
   with_options presence: true do
     validates  :title
@@ -23,8 +26,8 @@ class Performance < ApplicationRecord
     validates :price5, allow_blank: true
   end
 
-
-  belongs_to :user
-  has_one_attached :image
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
 
 end

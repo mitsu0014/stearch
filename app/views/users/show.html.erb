@@ -16,12 +16,12 @@
            <% @performances.each do |p| %>
              <li class="list">
                <%= link_to performance_path(p.id) do%>
-                 <%# <%= image_tag url_for(p)%>
                  <%= p.title %>
                  <%= p.group %>
                <% end %>
              </li>
            <% end %>
+
        </div>
   </div>
   <%= link_to 'トップページにもどる', root_path, class:"back-home" %>

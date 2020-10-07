@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/users' ,to: 'users#a'
   post '/user/guest_sign_in', to: 'users#new_guest'
 
-  resources :performances
+  resources :performances do
+    resources :likes, only: [:create, :destroy]
+  end
   resources :users, only: :show
 end

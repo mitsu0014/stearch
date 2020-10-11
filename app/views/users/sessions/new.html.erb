@@ -11,14 +11,14 @@
 
   <div class="field">
     <div class="form-text-wrap">
-      <%= f.label :email,class:"form-text" %><br />
+      <%= f.label :email,class:"form-text" ,for:"user_email"%>メールアドレス<br />
     </div>
     <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-up-form" %>
   </div>
 
   <div class="field">
     <div class="form-text-wrap">
-      <%= f.label :password,class:"form-text" %><br />
+      <%= f.label :password,class:"form-text" ,for:"user_password"%>パスワード<br />
     </div>
     <%= f.password_field :password, autocomplete: "current-password",class:"sign-up-form" %>
   </div>

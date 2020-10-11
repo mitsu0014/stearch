@@ -6,7 +6,7 @@ def basic_pass(path)
   visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
 end
 
-RSpec.describe "Users", type: :system do
+RSpec.describe "ユーザー新規登録", type: :system do
   before do
     @user = FactoryBot.build(:user)
   end
@@ -41,6 +41,38 @@ RSpec.describe "Users", type: :system do
         find('input[name="commit"]').click
       }.to change { User.count }.by(0)
       expect(current_path).to eq "/users"
+    end
+  end
+end
+
+
+RSpec.describe 'ログイン', type: :system do
+  before do
+    @user = FactoryBot.create(:user)
+  end
+  context 'ログインができるとき' do
+    it '保存されているユーザーの情報と合致すればログインができる' do
+      basic_pass root_path
+      expect(page).to have_content('ログイン')
+      visit new_user_session_path
+      fill_in 'メールアドレス', with: @user.email
+      fill_in 'パスワード', with: @user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq root_path
+      expect(page).to have_content('ログアウト')
+      expect(page).to have_no_content('新規登録')
+      expect(page).to have_no_content('新規登録')
+    end
+  end
+  context 'ログインができないとき' do
+    it '保存されているユーザーの情報と合致しないとログインができない' do
+      basic_pass root_path
+      expect(page).to have_content('ログイン')
+      visit new_user_session_path
+      fill_in 'メールアドレス', with: ""
+      fill_in 'パスワード', with: ""
+      find('input[name="commit"]').click
+      expect(current_path).to eq new_user_session_path
     end
   end
 end

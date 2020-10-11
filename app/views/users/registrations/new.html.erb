@@ -9,7 +9,7 @@
 
    <div class="field">
     <div class="form-text-wrap">
-      <label class="form-text">ユーザーネーム</label>
+      <label class="form-text" for="user_nickname">ユーザーネーム</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname",class:"sign-up-form" %>
@@ -17,7 +17,7 @@
  
   <div class="field">
     <div class="form-text-wrap">
-      <label class="form-text">メールアドレス</label>
+      <label class="form-text" for="user_email">メールアドレス</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"sign-up-form",placeholder:"stearch@email.com" %>
@@ -25,7 +25,7 @@
 
   <div class="field">
     <div class="form-text-wrap">
-      <label class="form-text">パスワード</label>
+      <label class="form-text" for="user_password">パスワード</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password, autocomplete: "new-password",class:"sign-up-form",placeholder:'６文字以上' %>
@@ -33,7 +33,7 @@
 
   <div class="field">
     <div class="form-text-wrap">
-      <label class="form-text">パスワード(確認)</label>
+      <label class="form-text" for="user_password_confirmation">パスワード(確認)</label>
       <span class="indispensable">必須</span>
     </div>
     <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"sign-up-form" %>

@@ -11,7 +11,7 @@
     <%# 公演画像 %>
     <div class="new-content">
       <div class="weight-bold-text">
-        公演画像
+        <label for="item-image">公演画像</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
       <div class="click-upload">
@@ -26,7 +26,7 @@
     <%# 公演タイトル %>
     <div class="new-content">
       <div class="weight-bold-text">
-        公演タイトル
+        <label for="title-name">公演タイトル</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
       <%= f.text_field :title, class:"new-performance-box", id:"title-name",placeholder:"例)ハムレット" %>
@@ -35,7 +35,7 @@
     <%# 公演団体 %>
     <div class="new-content">
       <div class="weight-bold-text">
-      公演団体名
+      <label for="group-name">公演団体名</label>
       <span class="indispensable-new-performance">必須</span>
       </div>
       <%= f.text_field :group, class:"new-performance-box", id:"group-name",placeholder:"例)劇団シェイクスピア" %>
@@ -44,12 +44,12 @@
     <%# ActiveHash %>
     <div class="new-content">
       <div class="weight-bold-text">
-        ジャンル
+        <label for="genre-name">ジャンル</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
       <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"genre-name"}) %>
       <div class="weight-bold-text">
-         エリア（東京都）
+         <label for="area-name">エリア（東京都）</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
       <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"area-name"}) %>
@@ -58,11 +58,11 @@
     <%# チケット料金 %>
     <div class="new-content">
       <div class="price-text">
-        <span>チケット料金１</span>
+        <label for="item-price1">チケット料金１</label>
           <span class="indispensable-new-performance">必須</span>
       </div>
         <span class="sell-yen">¥</span>
-        <%= f.text_field :price1, class:"price-input", id:"item-price", placeholder:"半角数字" %><span class="yen">円</span>
+        <%= f.text_field :price1, class:"price-input", id:"item-price1", placeholder:"半角数字" %><span class="yen">円</span>
         <div class="price-text">
         <span>チケット料金2</span><span class="indispensable-any">任意</span>
         </div>
@@ -90,12 +90,12 @@
       <div class="weight-bold-text">
         公演期間入力 <span class="indispensable-new-performance">必須</span>
       </div>
-      <label class="control-label" for="">開演日</label>
+      <label class="control-label" for="performance_start_date_1i">開演日</label>
       <%= f.date_select :start_date, {include_blank: true, use_month_numbers: true, start_year: 2020, end_year:2021}, class: 'form-control' %>
       <%# /開演日 %>
       <%# 終演日 %>
      <div class="new-content">
-       <label class="control-label" for="">終演日</label>
+       <label class="control-label" for="performance_end_date_1i">終演日</label>
        <%= f.date_select :end_date, {include_blank: true, use_month_numbers: true, start_year: 2020, end_year:2021}, class: 'form-control' %>
      </div>
    </div>
@@ -103,7 +103,7 @@
    <%# 開演時間 %>
     <div class="new-content">
       <div class="weight-bold-text">
-        開演時間詳細
+         <label for="time-name">開演時間詳細</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
         <%= f.text_area :start_at, class:"start-time-text", id:"time-name",placeholder:"例)9月10日12:00/17:00" %>
@@ -112,7 +112,7 @@
    <%# 公演詳細ページ %>
      <div class="new-content">
       <div class="weight-bold-text">
-        チケット購入先
+        <label for="url-name">チケット購入先</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
         <%= f.url_field :url, class:"new-performance-box", id:"url-name",placeholder:"http:// URL" %>

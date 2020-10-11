@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class PerformancesController < ApplicationController
-before_action :search_stage, only: [:index, :search]
-before_action :set_performance, only: [:show, :edit, :update, :destroy]
+  before_action :search_stage, only: %i[index search]
+  before_action :set_performance, only: %i[show edit update destroy]
 
   def index
     @performances = Performance.all
@@ -16,19 +18,17 @@ before_action :set_performance, only: [:show, :edit, :update, :destroy]
 
   def create
     @performance = Performance.new(performance_params)
-    if @performance.valid? 
-       @performance.save
-       redirect_to "/users/#{current_user.id}"
+    if @performance.valid?
+      @performance.save
+      redirect_to "/users/#{current_user.id}"
     else
       render :new
     end
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @performance.update(performance_params)
@@ -58,7 +58,6 @@ before_action :set_performance, only: [:show, :edit, :update, :destroy]
     @genre = Genre.where.not(id: 1)
     @area = Area.where.not(id: 1)
   end
-
 
   def performance_params
     params.require(:performance).permit(:image, :title, :group, :genre_id, :area_id, :price1, :price2, :price3, :price4, :price5, :start_date, :end_date, :start_at, :url).merge(user_id: current_user.id)

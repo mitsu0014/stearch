@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Performance < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :genre
@@ -7,12 +9,12 @@ class Performance < ApplicationRecord
     validates  :title
     validates  :image
     validates  :group
-    validates  :genre_id, numericality: { other_than: 1, message: 'を入力してください'}
+    validates  :genre_id, numericality: { other_than: 1, message: 'を入力してください' }
     validates  :area_id, numericality: { other_than: 1, message: 'を入力してください' }
     validates  :start_date
     validates  :end_date
     validates  :start_at
-    validates  :url 
+    validates  :url
   end
 
   with_options format: { with: /\A[0-9]+\z/ } do
@@ -23,8 +25,6 @@ class Performance < ApplicationRecord
     validates :price5, allow_blank: true
   end
 
-
   belongs_to :user
   has_one_attached :image
-
 end

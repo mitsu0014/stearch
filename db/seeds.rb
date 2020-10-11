@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Genre.create(name: '演劇')
 Genre.create(name: 'ミュージカル')
 Genre.create(name: '日本芸能')

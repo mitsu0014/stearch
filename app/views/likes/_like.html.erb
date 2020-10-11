@@ -1,9 +1,10 @@
   <% if user_signed_in? %>
-    <% if @performance.liked_by?(current_user) %> 
-        <p><span>お気に入り解除→ </span><%=link_to @performance.likes.count, performance_like_path(@performance.id), method: :delete, remote: true %></p>
+    <% if current_user.likes.find_by(user_id: @performance.id)  %>
+        <%=link_to 'いいねを外す' , performance_like_path(@performance.id), method: :delete, remote: true %><%= @performance.likes.count %>
+      <% else %>
+       <%=link_to 'いいね', performance_likes_path(@performance.id), method: :post, remote: true %><%= @performance.likes.count %>
+      <% end %>
     <% else %>
-        <p><span>お気に入り登録→ </span><%=link_to @performance.likes.count, performance_likes_path(@performance.id), method: :post, remote: true %></p>
-    <% end %>
-    <% else %>
-      <p><span>お気に入り数→ </span><%= @performance.likes.count %></p>
+      <p><span>いいね→ </span><%= @performance.likes.count %></p>
    <% end %>
+

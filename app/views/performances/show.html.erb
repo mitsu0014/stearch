@@ -40,10 +40,10 @@
       </tr>
     </tbody>
   </table>
-    <div id="likes_buttons_<%= @performance.id %>">
-        <%= render partial: 'likes/like', locals: { performance: @performance} %>
-    </div>
 
+  <div class="likes_buttons">
+        <%= render partial: 'likes/like', locals: { performance: @performance, like: @like} %>
+ </div>
 
   <div class="edit-dest">
     <% if user_signed_in? && current_user.id == @performance.user.id %>

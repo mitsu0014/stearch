@@ -21,6 +21,22 @@
                <% end %>
              </li>
            <% end %>
+        </div>
+        
+      <div class="my-performances">
+        <div class="my-performances-title">
+        <%= image_tag('like.png', class:"performance-logo", alt:"performance")%>
+           いいね！した公演
+           </div>
+           <% @likes.each do |like| %>
+             <li class="list">
+             <% performance = Performance.find_by(id: like.performance_id) %>
+               <%= link_to performance_path(performance.id) do %>
+                 <%= performance.title %>
+                 <%= performance.group %>
+               <% end %>
+             </li>
+           <% end %>
 
        </div>
   </div>

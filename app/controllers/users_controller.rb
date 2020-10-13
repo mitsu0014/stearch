@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   def show
     @nickname = current_user.nickname
     @performances = current_user.performances
+    @user = User.find(params[:id])
+    @performances_likes = @user.performances
+    @likes = @user.likes
   end
 
   def a

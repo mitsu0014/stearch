@@ -3,12 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-
+require('jquery')
 require("@rails/ujs").start()
+// = require_tree .
 // require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require('jquery')
 require("index.js")
 require("header.js")
 require("delete.js")

@@ -3,7 +3,7 @@ $(function() {
     $('#login-modal').fadeIn();
   });
 
-  $('i').on('click',function(){
+  $('.close-btn').on('click',function(){
     $('#login-modal').fadeOut();
     $('#signup-modal').fadeOut();
   });

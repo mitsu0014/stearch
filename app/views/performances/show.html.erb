@@ -43,6 +43,9 @@
 
         <%= render partial: 'likes/like', locals: { performance: @performance} %>
 
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="舞台公演検索サイトStearch!で検索しました！" data-hashtags="stearch,舞台" data-size="large" data-lang="ja" >Twitter</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   <div class="edit-dest">
     <% if user_signed_in? && current_user.id == @performance.user.id %>
       <%= link_to '情報の編集', edit_performance_path, method: :get, class:"edit-btn" %>

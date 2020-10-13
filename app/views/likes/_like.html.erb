@@ -1,6 +1,6 @@
   <% if user_signed_in? %>
-    <% if current_user.likes.find_by(user_id: @performance.id)  %>
-        <%=link_to 'いいねを外す' , performance_like_path(@performance.id), method: :delete, remote: true %><%= @performance.likes.count %>
+    <% if current_user.likes.find_by(performance_id: @performance.id)  %>
+        <%=link_to 'いいねを外す' , performance_like_path(@performance.id,current_user.likes.find_by(performance_id: @performance.id).id), method: :delete, remote: true %><%= @performance.likes.count %>
       <% else %>
        <%=link_to 'いいね', performance_likes_path(@performance.id), method: :post, remote: true %><%= @performance.likes.count %>
       <% end %>

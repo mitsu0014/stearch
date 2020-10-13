@@ -1,10 +1,22 @@
+ <div class="likes_buttons">
+ 
   <% if user_signed_in? %>
     <% if current_user.likes.find_by(performance_id: @performance.id)  %>
-        <%=link_to 'いいねを外す' , performance_like_path(@performance.id,current_user.likes.find_by(performance_id: @performance.id).id), method: :delete, remote: true %><%= @performance.likes.count %>
+        <%=link_to 'いいねを外す' , performance_like_path(@performance.id,current_user.likes.find_by(performance_id: @performance.id).id), method: :delete, remote: true, class:"like-btn" %>
+        <div class="likes-count">
+          <%= @performance.likes.count%>
+        </div>
       <% else %>
-       <%=link_to 'いいね', performance_likes_path(@performance.id), method: :post, remote: true %><%= @performance.likes.count %>
+       <%=link_to 'いいね!をする', performance_likes_path(@performance.id), method: :post, remote: true, class:"like-btn" %>
+       <div class="likes-count">
+        <%= @performance.likes.count %>
+      </div>
       <% end %>
     <% else %>
-      <p><span>いいね→ </span><%= @performance.likes.count %></p>
+      <span>いいね→ </span>
+       <div class="likes-count">
+       <%= @performance.likes.count %>
+        </div>
    <% end %>
 
+</div>

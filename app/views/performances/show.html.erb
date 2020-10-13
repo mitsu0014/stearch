@@ -41,9 +41,7 @@
     </tbody>
   </table>
 
-  <div class="likes_buttons">
         <%= render partial: 'likes/like', locals: { performance: @performance} %>
- </div>
 
   <div class="edit-dest">
     <% if user_signed_in? && current_user.id == @performance.user.id %>

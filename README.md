@@ -1,6 +1,6 @@
 Stearch!  
 舞台公演検索アプリ（東京）  
-http://54.248.52.38/  
+http://www.stearch.site
 basic認証  
 ID     admin333  
 pass   9999  

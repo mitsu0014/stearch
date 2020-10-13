@@ -12,6 +12,7 @@ class User < ApplicationRecord
 
   has_many :performances
   has_one_attached :image
+  has_many :likes
 
   def self.from_omniauth(auth)
     user = User.where(provider: auth.provider, uid: auth.uid).first

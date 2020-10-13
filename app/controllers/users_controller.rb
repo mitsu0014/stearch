@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class UsersController < ApplicationController
   def show
     @nickname = current_user.nickname
@@ -16,10 +14,11 @@ class UsersController < ApplicationController
   def new_guest
     user = User.find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
-      user.name = 'ゲストユーザー'
-      user.nickname = 'ゲストユーザー'
+      user.name = "ゲストユーザー"
+      user.nickname = "ゲストユーザー"
     end
     sign_in user
     redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
   end
 end
+

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://user-images.githubusercontent.com/68061154/95976426-7223fb80-0e52-11eb-9bba-5c219f15b2f4.png" width=40%>
+<img src="https://user-images.githubusercontent.com/68061154/95976426-7223fb80-0e52-11eb-9bba-5c219f15b2f4.png" width=50%>
 </p>
 <h2>Stearch!(スティーチ！)</h2>  
 舞台公演検索アプリ（東京）  
@@ -35,12 +35,13 @@ HTML/CSS/Sass/Javascript/jQuery/Ruby/Ruby on Rails
 ユーザー登録（Facebook,Twitter,Google登録）  
 ※ゲストユーザー登録  
 <今本番環境でのコールバックはできません>    
-公演登録、編集、削除
+公演登録、編集、削除  
 URLリンク(rinku)  
+Twitterシェアボタン  
 サイドメニュー（アコーディオンメニュー）  
 ページネーション(kaminari)  
 いいね機能（非同期）  
-いいねした公演一覧
+いいねした公演一覧  
 単体・結合テストコード(Rspec/Capybara)  
   
 ## インフラ  

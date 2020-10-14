@@ -10,6 +10,7 @@ class PerformancesController < ApplicationController
 
   def search
     @results = @p.result(distinct: true)
+    @results = Performance.all.page(params[:page]).per(5)
   end
 
   def new

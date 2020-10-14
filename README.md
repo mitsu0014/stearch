@@ -1,6 +1,22 @@
+<p align="center">
+![logo](https://user-images.githubusercontent.com/68061154/95976426-7223fb80-0e52-11eb-9bba-5c219f15b2f4.png)
+</p>
+## 🌐 App URL
+
+### **http://www.stearch.site**  
+　
+## 💬 Usage
+
+`$ git clone https://github.com/mitsu0014/stearch.git`  
+　
+## :art: Top Page
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68061154/95977494-ea3ef100-0e53-11eb-8b48-4029ddd146b0.gif" width=70%>  
+</p>　
+
 Stearch!  
 舞台公演検索アプリ（東京）  
-http://www.stearch.site
 basic認証  
 ID     admin333  
 pass   9999  

@@ -4,6 +4,10 @@
 <h2>Stearch!(スティーチ！)</h2>  
 舞台公演検索アプリ（東京）  
   
+舞台公演の検索サイトです 。 
+今日行われている公演をワンクリックで検索  
+複数条件を指定、絞り込みで検索します。  
+  
 ## 🌐 App URL
 
 ### **http://www.stearch.site**  
@@ -51,3 +55,10 @@ Active Storage
 Webサーバー（Nginx）  
 データベース（mariaDB）  
 自動デプロイ（Capistrano）  
+  
+## ER
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/68061154/95981708-08a7eb00-0e5a-11eb-8da0-6c3c19fb2d48.png" width=70%>  
+</p>
+
+## 概要

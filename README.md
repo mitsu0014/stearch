@@ -6,7 +6,7 @@
 今日行われている公演をワンクリックで検索、または、複数条件を指定・絞り込みで検索します。  
 　  
 トップページの検索機能はログイン不要で利用できます。  
-公演登録、いいね機能はヘッダーからユーザー登録をし、マイページから利用することができます。
+公演登録、いいね機能はヘッダーからユーザー登録をし、マイページから利用することができます。  
 ## 🌐 App URL
 
 ### **http://www.stearch.site**  
@@ -18,19 +18,26 @@ pass   9999
 ## :art: Top Page
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/68061154/95977494-ea3ef100-0e53-11eb-8b48-4029ddd146b0.gif" width=70%>  
+  <img src="https://user-images.githubusercontent.com/68061154/96071512-44d05f80-0edd-11eb-90c8-676ad0ecd91b.gif" width=70%>  
 </p>　
   
 ## 使用している言語    
 HTML/CSS/Sass/Javascript/jQuery3.5.1'/Ruby'2.6.5'/Ruby on Rails'6.0.0'  
   
-## 機能  
-検索機能（Ransack)  
-１クリックで今日に当てはまる公演を検索  
-複数条件検索（曖昧検索、active hash)  
-ユーザー登録（Facebook,Twitter,Google登録）  
-※ゲストユーザー登録  
-<今本番環境でのコールバックはできません>    
+## 機能一覧  
+<h2>トップページ検索機能（Ransack)</h2>  
+　●１クリックで今日行われている公演の検索機能  
+　●複数条件検索機能  
+　　○キーワード検索
+　　○Active Hash  
+　　○Radio Button  
+　　○開演日から終演日までの期間検索  
+　　○並び替え機能  
+<h2>ユーザー登録機能</h2>  
+　●ログイン・サインアップ機能(devise)  
+　　○メールアドレス登録・ログイン
+　　○omniauth認証SNS登録・ログイン（Facebook,Twitter,Google登録）  
+<h2>公演登録機能</h2>
 公演登録、編集、削除  
 URLリンク(rinku)  
 Twitterシェアボタン  

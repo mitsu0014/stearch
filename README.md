@@ -2,21 +2,18 @@
 <img src="https://user-images.githubusercontent.com/68061154/95976426-7223fb80-0e52-11eb-9bba-5c219f15b2f4.png" width=50%>
 </p>
 <h2>Stearch!(スティーチ！)</h2>  
-舞台公演検索アプリ（東京）  
-  
-舞台公演の検索サイトです 。 
-今日行われている公演をワンクリックで検索  
-複数条件を指定、絞り込みで検索します。  
-  
+東京都の舞台公演を検索するアプリです。  
+今日行われている公演をワンクリックで検索、または、複数条件を指定・絞り込みで検索します。  
+　  
+トップページの検索機能はログイン不要で利用できます。  
+公演登録、いいね機能はヘッダーからユーザー登録をし、マイページから利用することができます。
 ## 🌐 App URL
 
 ### **http://www.stearch.site**  
 basic認証  
 ID     admin333  
 pass   9999  
-## 💬 Usage
-
-`$ git clone https://github.com/mitsu0014/stearch.git`  
+ヘッダーの【ゲスト】ボタンからログインできます。
 　
 ## :art: Top Page
 
@@ -24,13 +21,8 @@ pass   9999
   <img src="https://user-images.githubusercontent.com/68061154/95977494-ea3ef100-0e53-11eb-8b48-4029ddd146b0.gif" width=70%>  
 </p>　
   
-## version
-Ruby '2.6.5'  
-Ruby on Rails '6.0.0'  
-jquery '3.5.1'  
-  
 ## 使用している言語    
-HTML/CSS/Sass/Javascript/jQuery/Ruby/Ruby on Rails  
+HTML/CSS/Sass/Javascript/jQuery3.5.1'/Ruby'2.6.5'/Ruby on Rails'6.0.0'  
   
 ## 機能  
 検索機能（Ransack)  

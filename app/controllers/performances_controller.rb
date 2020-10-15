@@ -47,6 +47,9 @@ class PerformancesController < ApplicationController
     end
   end
 
+  def privacy
+  end
+
   private
 
   def set_performance

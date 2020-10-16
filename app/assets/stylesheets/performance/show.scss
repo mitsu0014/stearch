@@ -8,16 +8,28 @@
   background-image: image-url('background.jpg');
 }
 
-.detail-performance {
-  width: 20vw;
-}
-
 .detail-table {
   background-color: #f8f8f8;
-  width: 70vh;
+  width: 70vw;
   height: 90vh;
 }
 
+.detail-performance {
+  width: 20vw;
+  background-color: #ec6d71;
+  border: solid 18px #f8f8f8;
+  color: white;
+  opacity: 0.8;
+}
+
+.link-text {
+  overflow-x: scroll;
+}
+
+
+.detail-value {
+  width: 50vw;
+}
 
 .edit-dest {
 margin: 50px;

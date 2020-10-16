@@ -2,10 +2,10 @@
 
 <div class="detail-content">
 
+    <%= image_tag @performance.image,alt:"image",class:"show-image"%>
+<div>
   <table class="detail-table">
     <tbody>
-    <%= image_tag @performance.image,alt:"image",class:"show-image"%>
-      <tr>
         <th class="detail-performance">公演名</th>
         <td class="detail-value"><%= @performance.title %></td>
       </tr>
@@ -36,10 +36,15 @@
       </tr>
       <tr>
         <th class="detail-performance">チケット購入先</th>
-        <td class="detail-value"><%= raw Rinku.auto_link(@performance.url, :all, 'target="_blank"') %>
+        <td class="link-text">
+        <div class="detail-value">
+        <%= raw Rinku.auto_link(@performance.url, :all, 'target="_blank"') %>
+        </div>
+        </td>
       </tr>
     </tbody>
   </table>
+</div>
 
         <%= render partial: 'likes/like', locals: { performance: @performance} %>
 

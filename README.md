@@ -8,7 +8,7 @@
 トップページの検索機能はログイン不要で利用できます。  
 公演登録、いいね機能はヘッダーからユーザー登録をし、マイページから利用することができます。  
 ## 🌐 App URL
-### **http://www.stearch.site**  
+### **https://www.stearch.site**  
 ヘッダーの【ゲスト】ボタンからログインできます。
 　
 ## 🌐 Top Page
@@ -60,7 +60,7 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ●HTML/CSS/Sass/Javascript/jQuery3.5.1'/Ruby'2.6.5'/Ruby on Rails'6.0.0'  
 ●単体・結合テストコード(Rspec/Capybara)  
 ### 本番環境  
-●AWS（EC2/S3/Routes53/Amazon Linux2/Cloud Front）  
+●AWS（EC2/S3/Routes53/Amazon Linux2/Cloud Front/ACM）  
 ●アプリケーションサーバー（Unicorn）  
 ●Webサーバー（Nginx）  
 ●データベース（mariaDB）  

@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2020_10_07_052452) do
     t.text "start_at", null: false
     t.integer "user_id", null: false
     t.text "url", null: false
+    t.text "infomation"
+    t.string "theatre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -17,6 +17,10 @@
         <th class="detail-performance">ジャンル</th>
         <td class="detail-value"><%= @performance.genre.name %></td>
       </tr>
+       <tr>
+        <th class="detail-performance">劇場</th>
+        <td class="detail-value"><%= @performance.theatre %></td>
+      </tr>
       <tr>
         <th class="detail-performance">エリア(東京都)</th>
         <td class="detail-value"><%= @performance.area.name %></td>
@@ -34,6 +38,10 @@
         <th class="detail-performance">開演時間</th>
         <td class="detail-value"><%= @performance.start_at%></td>
       </tr>
+      <tr>
+       <th class="detail-performance">概要</th>
+       <td><%= @performance.infomation%></td>
+       </tr>
       <tr>
         <th class="detail-performance">チケット購入先</th>
         <td class="link-text">

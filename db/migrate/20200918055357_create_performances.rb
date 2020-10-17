@@ -16,7 +16,9 @@ class CreatePerformances < ActiveRecord::Migration[6.0]
       t.date     :end_date, null: false
       t.text     :start_at, null: false
       t.integer  :user_id, null: false, foreign_key: true
-      t.text :url, null: false
+      t.text     :url, null: false
+      t.text     :infomation
+      t.string   :theatre
       t.timestamps
     end
   end

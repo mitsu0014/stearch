@@ -41,6 +41,15 @@
       <%= f.text_field :group, class:"new-performance-box", id:"group-name",placeholder:"例)劇団シェイクスピア" %>
     </div>
     <%# /公演団体 %>
+    <%# 劇場  %>
+    <div class="new-content">
+      <div class="weight-bold-text">
+      <label for="group-name">劇場</label>
+      <span class="indispensable-any">任意</span>
+      </div>
+      <%= f.text_field :theatre, class:"new-performance-box", id:"theatre-name",placeholder:"例)東京芸術劇場プレイハウス" %>
+    </div>
+    <%# /劇場  %>
     <%# ActiveHash %>
     <div class="new-content">
       <div class="weight-bold-text">
@@ -109,6 +118,15 @@
         <%= f.text_area :start_at, class:"start-time-text", id:"time-name",placeholder:"例)9月10日12:00/17:00" %>
     </div>
    <%# /開演時間 %>
+    <%# インフォメーション %>
+    <div class="new-content">
+      <div class="weight-bold-text">
+         <label for="time-name">インフォメーション</label>
+        <span class="indispensable-any">任意</span>
+      </div>
+        <%= f.text_area :infomation, class:"start-time-text", id:"infomation",placeholder:"原作/演出/出演者/あらすじその他概要" %>
+    </div>
+   <%# /インフォメーション %>
    <%# 公演詳細ページ %>
      <div class="new-content">
       <div class="weight-bold-text">

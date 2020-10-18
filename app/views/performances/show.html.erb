@@ -52,6 +52,31 @@
       </tr>
     </tbody>
   </table>
+  <%if @performance.latitude != nil %>
+<div id='map'>
+<script>
+let map
+function initMap(){
+  geocoder = new google.maps.Geocoder()
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: <%= @performance.latitude %>, lng: <%= @performance.longitude %>},
+    zoom: 15,
+       zoomControl: false,
+       mapTypeControl: false,
+       fullscreenControl: false,
+       streetViewControl: false,
+  });
+
+  marker = new google.maps.Marker({
+    position: {lat: <%= @performance.latitude %>, lng: <%= @performance.longitude %>},
+    map: map
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key<%= ENV['GOOGLE_MAP_API'] %>&callback=initMap" async defer></script>
+</div>
+<% end %>
 </div>
 
         <%= render partial: 'likes/like', locals: { performance: @performance} %>

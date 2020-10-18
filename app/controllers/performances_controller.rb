@@ -66,6 +66,6 @@ class PerformancesController < ApplicationController
   end
 
   def performance_params
-    params.require(:performance).permit(:image, :title, :group, :genre_id, :area_id, :price1, :price2, :price3, :price4, :price5, :start_date, :end_date, :start_at, :url, :infomation, :theatre).merge(user_id: current_user.id)
+    params.require(:performance).permit(:image, :title, :group, :genre_id, :area_id, :price1, :price2, :price3, :price4, :price5, :start_date, :end_date, :start_at, :url, :infomation, :theatre, :address).merge(user_id: current_user.id)
   end
 end

@@ -5,6 +5,9 @@ class Performance < ApplicationRecord
   belongs_to_active_hash :genre
   belongs_to_active_hash :area
 
+  geocoded_by :address
+  after_validation :geocode
+
   with_options presence: true do
     validates  :title
     validates  :image

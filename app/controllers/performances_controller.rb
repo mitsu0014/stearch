@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
 class PerformancesController < ApplicationController
-  before_action :search_stage, only: %i[index search]
-  before_action :set_performance, only: %i[show edit update destroy]
+  before_action :search_stage, only: [:index ,:search]
+  before_action :set_performance, only: [:show, :edit, :update, :destroy]
 
   def index
     @performances = Performance.all
   end
 
   def search
-    @results = @p.result(distinct: true)
-    @results = Performance.all.page(params[:page]).per(5)
+    @results = @p.result(distinct: true).page(params[:page]).per(5)
   end
 
   def new

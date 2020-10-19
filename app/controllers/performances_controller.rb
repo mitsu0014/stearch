@@ -27,11 +27,9 @@ class PerformancesController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @performance.update(performance_params)
@@ -50,8 +48,7 @@ class PerformancesController < ApplicationController
     end
   end
 
-  def privacy
-  end
+  def privacy; end
 
   private
 

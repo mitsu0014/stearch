@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post '/user/guest_sign_in', to: 'users#new_guest'
 
   resources :performances do
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: %i[create destroy]
   end
   resources :users, only: :show
 end

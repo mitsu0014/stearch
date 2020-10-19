@@ -53,8 +53,8 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ●詳細ページ機能  
 　　・URLリンク(rinku)  
 　　・非同期いいね機能(ログインユーザーのみ利用可能)  
-　　・Twitterシェア機能
- <img src="https://user-images.githubusercontent.com/68061154/96432135-6ca62700-123f-11eb-8e1a-e50ed8a3e1de.gif" width=50%>
+　　・Twitterシェア機能  
+<img src="https://user-images.githubusercontent.com/68061154/96432135-6ca62700-123f-11eb-8e1a-e50ed8a3e1de.gif" width=50%>
 
 ### ヘッダー
 ●ユーザー登録・ログインボタン→モーダル表示  

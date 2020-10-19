@@ -30,18 +30,20 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ### 検索機能（Ransack)
 ●１クリックで今日行われている公演の検索機能  
 ●複数条件検索機能  
-　　・ページ下、条件検索フォームへアニメーション遷移(jQuery)  
+　　・ページ下、条件検索フォームへアニメーション遷移  
 　　・キーワード検索  
 　　・Active Hash  
 　　・Radio Button  
 　　・開演日から終演日までの期間検索  
 　　・並び替え機能  
+ <img src="https://user-images.githubusercontent.com/68061154/96409218-e201ff80-121f-11eb-81a8-ba0db4266a4a.gif" width=60%>
 ●リザルトページ  
 　　・ページネーション機能(kaminari)  
 ### ユーザー登録機能
 ●ログイン・サインアップ機能(devise)  
 　　・メールアドレス登録・ログイン  
 　　・omniauth認証SNS登録・ログイン（Facebook,Twitter,Google登録）  
+ <img src="https://user-images.githubusercontent.com/68061154/96408953-7c157800-121f-11eb-9a1f-076a15e2ac93.gif" width=60%>
 ### 公演登録機能
 ●マイページ機能  
 　　・画像投稿(Active Storage)  
@@ -73,14 +75,14 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 
 ## 🌐 インフラ構成図
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/68061154/96083920-1791aa80-0ef9-11eb-8c8e-d93e26dbe8d3.png" width=70%>  
+  <img src="https://user-images.githubusercontent.com/68061154/96408742-145f2d00-121f-11eb-93e1-03f56f261649.png" width=70%>  
 </p>
 
 ## 🌐 工夫した点
 UI/UXのシンプルさ、使いやすさに拘りました。  
 トップページでなんのアプリなのか、どう使ったらいいかがわかるように。また登録に迷うことがないように気をつけて設計しました。これらは積極的に公開してフィードバックを貰い使いにくい点を洗い出して改善しています。すごく目立つ機能よりも、ちょっと可愛いな、人に紹介したいな、と思ってもらい拡散されやすいような、心配りのあるアプリケーションを目指しました。
 
-## 🌐 アップデート
+## 🌐 今後のアップデート
 ・<a href="https://github.com/mitsu0014/stearch/issues">issue</a>に記載しています。
 
 ## 🌐 Author

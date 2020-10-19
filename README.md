@@ -53,10 +53,14 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ●詳細ページ機能  
 　　・URLリンク(rinku)  
 　　・非同期いいね機能(ログインユーザーのみ利用可能)  
-　　・Twitterシェア機能  
+　　・Twitterシェア機能
+ <img src="https://user-images.githubusercontent.com/68061154/96432135-6ca62700-123f-11eb-8e1a-e50ed8a3e1de.gif" width=50%>
+
 ### ヘッダー
 ●ユーザー登録・ログインボタン→モーダル表示  
-●サイドメニュー（アコーディオンメニュー）  
+●サイドメニュー（アコーディオンメニュー） 
+ <img src="https://user-images.githubusercontent.com/68061154/96433078-12599600-1240-11eb-8912-627208a05579.gif" width=50%> 
+
 ## 🌐 環境  
 ### Code
 ●HTML/CSS/Sass/Javascript/jQuery3.5.1'/Ruby'2.6.5'/Ruby on Rails'6.0.0'  
@@ -67,7 +71,6 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ●Webサーバー（Nginx）  
 ●データベース（mariaDB）  
 ●自動デプロイ（Capistrano）  
-  
 ## 🌐 ER
 <p align="center">
   <img src="https://user-images.githubusercontent.com/68061154/95981708-08a7eb00-0e5a-11eb-8da0-6c3c19fb2d48.png" width=70%>  

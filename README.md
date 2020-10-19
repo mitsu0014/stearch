@@ -36,14 +36,14 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 　　・Radio Button  
 　　・開演日から終演日までの期間検索  
 　　・並び替え機能  
- <img src="https://user-images.githubusercontent.com/68061154/96409218-e201ff80-121f-11eb-81a8-ba0db4266a4a.gif" width=60%>
 ●リザルトページ  
 　　・ページネーション機能(kaminari)  
+ <img src="https://user-images.githubusercontent.com/68061154/96409218-e201ff80-121f-11eb-81a8-ba0db4266a4a.gif" width=50%>
 ### ユーザー登録機能
 ●ログイン・サインアップ機能(devise)  
 　　・メールアドレス登録・ログイン  
 　　・omniauth認証SNS登録・ログイン（Facebook,Twitter,Google登録）  
- <img src="https://user-images.githubusercontent.com/68061154/96408953-7c157800-121f-11eb-9a1f-076a15e2ac93.gif" width=60%>
+ <img src="https://user-images.githubusercontent.com/68061154/96408953-7c157800-121f-11eb-9a1f-076a15e2ac93.gif" width=50%>
 ### 公演登録機能
 ●マイページ機能  
 　　・画像投稿(Active Storage)  

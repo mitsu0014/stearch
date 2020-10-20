@@ -5,9 +5,6 @@ class Performance < ApplicationRecord
   belongs_to_active_hash :genre
   belongs_to_active_hash :area
 
-  geocoded_by :address
-  after_validation :geocode, if: :address_changed?
-
   with_options presence: true do
     validates  :title
     validates  :image
@@ -27,6 +24,9 @@ class Performance < ApplicationRecord
     validates :price4, allow_blank: true
     validates :price5, allow_blank: true
   end
+
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
 
   belongs_to :user
   has_one_attached :image

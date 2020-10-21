@@ -54,7 +54,7 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 　　・URLリンク(rinku)  
 　　・非同期いいね機能(ログインユーザーのみ利用可能)  
 　　・Twitterシェア機能  
-　　・Google MAP緯度経度取得表示
+　　・Google MAP緯度経度取得表示（Google Maps Javascript API/Geocording API）  
 <img src="https://user-images.githubusercontent.com/68061154/96665822-b81c1a80-1390-11eb-914d-2725365829aa.gif" width=50%>
 
 ### ヘッダー
@@ -72,8 +72,7 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ●Webサーバー（Nginx）  
 ●データベース（mariaDB）  
 ●自動デプロイ（Capistrano） 
-### API
-●●GCP（Google Maps Javascript API/Geocording API）  
+
 ## 🌐 ER
 <p align="center">
   <img src="https://user-images.githubusercontent.com/68061154/95981708-08a7eb00-0e5a-11eb-8da0-6c3c19fb2d48.png" width=70%>  

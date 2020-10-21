@@ -91,4 +91,5 @@ UI/UXのシンプルさ、使いやすさに拘りました。
 ・<a href="https://github.com/mitsu0014/stearch/issues">issue</a>に記載しています。
 
 ## 🌐 Author
-・<a href="https://twitter.com/hiromitsu1208">Twitter</a>
+<a href="https://twitter.com/hiromitsu1208">Twitter</a>  
+<a href="https://qiita.com/mitsu1208g">Qiita</a>

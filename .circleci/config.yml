@@ -8,13 +8,13 @@ jobs:
       - image: circleci/ruby:2.6.3-stretch-node
     executor: ruby/default
     steps:
-      - checkout
+       checkout
       - run:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
 
-      environment:
+      - environment:
         - BUNDLER_VERSION: 2.0.2
         - RAILS_ENV: 'test'
     - image: circleci/mysql:5.7
@@ -26,7 +26,7 @@ jobs:
 
 
     steps:
-    - checkout
+     checkout
 
     - restore_cache:
         keys:

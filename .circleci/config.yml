@@ -3,14 +3,6 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.5-stretch-node
-    executor: ruby/default
-    steps:
-      - checkout
-      - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
-
             environment:
         - BUNDLER_VERSION: 2.0.2
         - RAILS_ENV: 'test'

@@ -15,9 +15,9 @@ $(function() {
   $('#sub-text').fadeIn(2000);
 },1000);
 
- $('.top-click').css({display: 'none'});
+ $('.search-btn-today').css({display: 'none'});
  setTimeout(function(){
-  $('.top-click').fadeIn(1000);
+  $('.search-btn-today').fadeIn(1000);
 },1000);
 
 setTimeout(function(){
@@ -33,6 +33,16 @@ setTimeout(function(){
       var position = target.offset().top;
       $("html, body").animate({scrollTop:position}, speed, 'swing');
       return false;
+  });
+
+  $(window).on("resize", function(){
+     var x = $(window).width();
+     var y = 640;
+     if (x < y){
+        $('.twitter-timeline').hide();
+     } else {
+        $('.twitter-timeline').show();
+     }
   });
 
 setTimeout(function(){

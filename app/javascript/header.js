@@ -12,6 +12,36 @@ $(function() {
           return false;
       });
   });
+  $(window).on("resize", function(){
+    var x = $(window).width();
+    var y = 640;
+    if (x < y){
+       $('#header-navi').hide();
+    } else {
+       $('#header-navi').show();
+    }
+ });
+
+ $(window).on("resize", function(){
+  var x = $(window).width();
+  var y = 640;
+  if (x < y){
+     $('#navi-under').hide();
+  } else {
+     $('#navi-under').show();
+  }
+});
+
+$(window).on("resize", function(){
+  var x = $(window).width();
+  var y = 640;
+  if (x < y){
+     $('.header-list li').hide();
+  } else {
+     $('.header-list li').show();
+  }
+});
+
 });
 
 //サイドメニュー

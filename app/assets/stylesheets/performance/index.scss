@@ -40,14 +40,14 @@
 }
 
 .text-search {
-  width: 300px;
+  width: 40vw;
   height: 40px;
   padding-left: 20px;
   margin: 0 0 10px 48px;
 }
 
 .select-box {
-  width: 300px;
+  width: 40vw;
   height: 40px;
   padding-left: 20px;
   margin: 0 0 10px 48px;
@@ -59,7 +59,7 @@
 }
 
 .date-form {
-  width: 300px;
+  width: 15vw;
   height: 40px;
   padding-left: 20px;
   margin: 0 0 10px 48px;
@@ -149,28 +149,34 @@ justify-content: center;
     }
   }
 
-  .hidden-search {
-   margin: 80px  0 100px 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   position: relative;
-  }
+  .today-search {
+    min-height: 100vh;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+   }
 
-  .search-btn-today {
-    margin-top: 20px; 
-    color: white;
-    background-color: #ec6d71;
-    border-bottom: 5px solid #c85554;
-    width: 250px;
-    height: 60px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
+
+#search-btn-today {
+  margin-top: 20px; 
+  color: white;
+  background-color: #ec6d71;
+  border-bottom: 5px solid #c85554;
+  width: 250px;
+  height: 60px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.search-btn-today {
+  margin: 80px  0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
-  .search-btn-today:hover {
+  #search-btn-today:hover {
     margin-top: 23px;
     color: white;
     background: #ec6d71;
@@ -179,30 +185,25 @@ justify-content: center;
     cursor: pointer;
   }
 
-  .click-logo {
-    width: 60px;
-    margin: 20px;
-    position: absolute;
-    left: 70px;
-    top: 30px;
-  }
+.top-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .sub-text {
-    position: absolute;
-    left: 330px;
-    font-size: 12px;
-    bottom: 150px;
-    color: #555555;
+  .top-image {
     display: none;
   }
 
- .today-search {
-  min-height: 100vh;
- }
+  .sub-text {
+    display: none;
+    left: 330px;
+    font-size: 12px;
+    color: #555555;
+    margin-top: 20px;
+  }
 
- .top-image {
-   display: none;
- }
 
 #to-pagedown {
 
@@ -238,7 +239,7 @@ justify-content: center;
 
 .twitter {
   position: absolute;
-  left: 50px;
+  left: 40px;
   bottom: 20px;
- display: none;
+  display: none;
 }

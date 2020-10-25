@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  width: 100vw;
   background-image: image-url('background.jpg');
 }
 
@@ -13,18 +14,17 @@
 }
 
 .results {
-  width: 550px;
+  width: 500px;
 }
 
 .results ul {
   margin: 30px 0 80px 0;
   background-color: #f8f8f8;
   padding-bottom: 20px;
-
 }
 
 .result-content {
-  padding: 20px 20px 0 20px;
+  padding: 20px 10px 0 0px;
   display: flex;
   position: relative;
 }
@@ -57,8 +57,8 @@
 
 .link-btn {
  position: absolute;
- bottom: 12px;
- left: 360px;
+ bottom: 10px;
+ left: 320px;
 }
 
 .link-btn:hover {
@@ -107,9 +107,9 @@
 }
 
 .search-image {
- width: 100px;
+  width: 100px;
  height: 150px;
- margin-right: 20px;
+ padding-right: 10px;
 }
 
 .p-top {

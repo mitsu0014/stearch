@@ -3,22 +3,22 @@
 <div class="search-page">
   <div class="today-search">
      <%= search_form_for @p, url: performances_search_path do |f| %>
-    <%#hoverで画像変換%>
-        <%= image_tag('top_off.png', class:"top-image",id:"top-image", alt:"image")%>
-     <%#今日の公演検索%>
-     <%= f.hidden_field :end_date_gteq,value: (f.object.start_date || Time.now.strftime("%Y-%m-%d")),class:"date-form"%>
-     <%= f.hidden_field :start_date_lteq, value: (f.object.end_date || Time.now.strftime("%Y-%m-%d")) ,class:"date-form"%>
-     <div class="hidden-search">
-      <div class="sub-text" id="sub-text">なんか舞台みにいきたくない？</div>
-         <%= f.submit '今日の公演(東京)を検索する',  class:"search-btn-today top-click", id:"search-btn-today"%>
-         <%= image_tag('click.png', class:"click-logo top-click", alt:"image")%>
-      </div>
-      <%end%>
-      <%#/今日の公演検索%>
-   <div class="twitter">
-   <a class="twitter-timeline" href="https://twitter.com/spice_stage?ref_src=twsrc%5Etfw" width="250px" height="50px" data-tweet-limit="1" data-chrome="nofooter" data-chrome="transparent"data-chrome="noborders" data-chrome="transparent" >Tweets by spice_stage</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-   </div>
-   </div>
+      <div class="top-image-wrap">
+         <%= image_tag('top_off.png', class:"top-image",id:"top-image", alt:"image")%>
+         <p class="sub-text" id="sub-text">なんか舞台みにいきたくない？</p>
+       </div>
+       <%#今日の公演検索%>
+         <%= f.hidden_field :end_date_gteq,value: (f.object.start_date || Time.now.strftime("%Y-%m-%d")),class:"date-form"%>
+         <%= f.hidden_field :start_date_lteq, value: (f.object.end_date || Time.now.strftime("%Y-%m-%d")) ,class:"date-form"%>
+           <div class="search-btn-today">
+                <%= f.submit '今日の公演(東京)を検索する',  class: "search-btn-content", id:"search-btn-today"%>
+           </div>
+       <%#/今日の公演検索%>
+     <%end%>
+  </div>
+  <div class="twitter">
+     <a class="twitter-timeline" href="https://twitter.com/spice_stage?ref_src=twsrc%5Etfw" width="20vw" data-tweet-limit="1" data-chrome="nofooter" data-chrome="transparent"data-chrome="noborders" data-chrome="transparent" >Tweets by spice_stage</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 
    <p id="to-pagedown"><a>詳細検索へ</a></p>
 

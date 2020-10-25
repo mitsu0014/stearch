@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PerformancesController < ApplicationController
-  before_action :search_stage, only: [:index ,:search]
+  before_action :search_stage, only: [:index , :search]
   before_action :set_performance, only: [:show, :edit, :update, :destroy]
 
   def index

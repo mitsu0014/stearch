@@ -64,7 +64,7 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 
 ## 🌐 環境  
 ### Code
-●HTML/CSS/Sass/Javascript/jQuery3.5.1'/Ruby'2.6.5'/Ruby on Rails'6.0.0'  
+●HTML/CSS/Sass/git/jQuery3.5.1'/Ruby'2.6.5'/Ruby on Rails'6.0.0'/Docker 
 ●単体・結合テストコード(Rspec/Capybara)  
 ### 本番環境  
 ●AWS（EC2/S3/Routes53/Amazon Linux2/VPC/ACM/ELB）  

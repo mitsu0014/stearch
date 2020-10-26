@@ -257,12 +257,12 @@ justify-content: center;
 
 
 @media screen and (max-width:640px) {
-   
-
 .twitter-wrap {
   display: none;
 }
+}
 
+@media screen and (max-width:480px) {
 .topimage-btn-wrap {
   margin-bottom: 180px;
 }

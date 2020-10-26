@@ -1,7 +1,9 @@
 <%= render "shared/header" %>
      
 <div class="search-page">
+
   <div class="today-search">
+   <div class="topimage-btn-wrap">
      <%= search_form_for @p, url: performances_search_path do |f| %>
       <div class="top-image-wrap">
          <%= image_tag('top_off.png', class:"top-image",id:"top-image", alt:"image")%>
@@ -15,60 +17,63 @@
            </div>
        <%#/今日の公演検索%>
      <%end%>
-  </div>
-  <div class="twitter">
+     </div>
+     <div class="twitter-wrap">
+       <div class="twitter">
      <a class="twitter-timeline" href="https://twitter.com/spice_stage?ref_src=twsrc%5Etfw" width="20vw" data-tweet-limit="1" data-chrome="nofooter" data-chrome="transparent"data-chrome="noborders" data-chrome="transparent" >Tweets by spice_stage</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+       </div>
+       </div>
+       <p id="to-pagedown"><a>詳細検索へ</a></p>
   </div>
 
-   <p id="to-pagedown"><a>詳細検索へ</a></p>
-
-  <%= search_form_for @p, url: performances_search_path do |f| %>
-  <div class="main-title">
-    <h1>検索条件を絞り込もう！</h1>
-  </div>
-  <div class="search-content">
-     <div class="search-wrap">
-       <div class="search-form-label">
-        <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
-         <%= f.label :title_eq, '公演タイトルのキーワード' %>
-       </div>
-       <div class="search-form">
-         <%= f.search_field :title_cont, placeholder: "例）ロミオとジュリエット", class:"text-search"%>
-       </div>
-     </div>
-     <div class="search-wrap">
-       <div class="search-form-label">
-        <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
-         <%= f.label :group_eq, '団体のキーワード' %>
-       </div>
-       <div class="search-form">
-         <%= f.search_field :group_cont,  placeholder: "例）劇団シェイクスピア",class:"text-search"%>
-       </div>
-     </div>
-     <div class="search-wrap">
-       <div class="search-form-label">
-        <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
-         <%= f.label :genre_id_eq, 'ジャンル' %>
-       </div>
-         <div class="search-form">
-           <%= f.collection_select :genre_id_eq, @genre, :id, :name, {include_blank: '--'}, class:"select-box", id:"genre-name" %>
-         </div>
-     </div>
-       <div class="search-wrap">
-         <div class="search-form-label">
-          <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
-           <%= f.label :area_id_eq, 'エリア（東京都)'%>
-         </div>
-         <div class="search-form">
-           <%= f.collection_select :area_id_eq, @area, :id, :name, {include_blank: '--'}, class:"select-box", id:"area-name" %>
-         </div>
-       </div>
-       <div class="search-wrap">
-         <div class="search-form-label">
-          <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
-           <%= f.label :price_name_eq, 'チケット価格' %>
-         </div>
-         <div class="search-radio">
+  <div class="search-content-wrap">
+    <%= search_form_for @p, url: performances_search_path do |f| %>
+      <div class="main-title">
+        <h1>検索条件を絞り込もう！</h1>
+      </div>
+      <div class="search-content">
+        <div class="search-wrap">
+          <div class="search-form-label">
+            <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+            <%= f.label :title_eq, '公演タイトルのキーワード' %>
+          </div>
+          <div class="search-form">
+            <%= f.search_field :title_cont, placeholder: "例）ロミオとジュリエット", class:"text-search"%>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <div class="search-form-label">
+            <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+            <%= f.label :group_eq, '団体のキーワード' %>
+          </div>
+          <div class="search-form">
+            <%= f.search_field :group_cont,  placeholder: "例）劇団シェイクスピア",class:"text-search"%>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <div class="search-form-label">
+            <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+            <%= f.label :genre_id_eq, 'ジャンル' %>
+          </div>
+          <div class="search-form">
+            <%= f.collection_select :genre_id_eq, @genre, :id, :name, {include_blank: '--'}, class:"select-box", id:"genre-name" %>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <div class="search-form-label">
+            <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+             <%= f.label :area_id_eq, 'エリア（東京都)'%>
+          </div>
+          <div class="search-form">
+             <%= f.collection_select :area_id_eq, @area, :id, :name, {include_blank: '--'}, class:"select-box", id:"area-name" %>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <div class="search-form-label">
+            <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+            <%= f.label :price_name_eq, 'チケット価格' %>
+          </div>
+          <div class="search-radio">
             <%= f.radio_button :price1_or_price2_or_price3_or_price4_or_price5_lteq,''%>
             指定なし
             <%= f.radio_button :price1_or_price2_or_price3_or_price4_or_price5_lteq, '3000'%>
@@ -83,27 +88,28 @@
             10000円以下
             <%= f.radio_button :price1_or_price2_or_price3_or_price4_or_price5_gteq, '10001'%>
             10000円〜
-         </div>
-       </div>
-       <div class="search-wrap">
-         <div class="search-form-label">
-          <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
-           期間
-         </div>
-         <div class="date-search-form">
-           <%= f.date_field :end_date_gteq, placeholder: "" ,class:"date-form"%><div class="wave">〜</div>
-           <%= f.date_field :start_date_lteq, placeholder: "" ,class:"date-form"%>
-         </div>
-       </div>
-       <div class="change-form">
-         <p><%= f.select( :sorts, { '並び替え': 'updated_at desc', '料金の安い順': 'price1 asc', '料金の高い順': 'price1 desc','開演日の早い順': 'start_date desc','開演日の遅い順': 'start_date asc'} , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
-       </div>
-       <div class="search-btn">
-        <%= image_tag('search.png', class:"search-logo", alt:"search")%>
-         <%= f.submit '検索する', class:"search-btn-content"%>
-       </div>
-    </div>
-  <% end %>
+          </div>
+        </div>
+        <div class="search-wrap">
+          <div class="search-form-label">
+            <%= image_tag('pen.png', class:"pen-logo", alt:"search")%>
+             期間
+            </div>
+          <div class="date-search-form">
+            <%= f.date_field :end_date_gteq, placeholder: "" ,class:"date-form"%><div class="wave">〜</div>
+            <%= f.date_field :start_date_lteq, placeholder: "" ,class:"date-form"%>
+          </div>
+        </div>
+        <div class="change-form">
+          <p><%= f.select( :sorts, { '並び替え': 'updated_at desc', '料金の安い順': 'price1 asc', '料金の高い順': 'price1 desc','開演日の早い順': 'start_date desc','開演日の遅い順': 'start_date asc'} , { onchange: 'this.form.submit()'},class:"change-pulldown" ) %></p>
+        </div>
+        <div class="search-btn">
+          <%= image_tag('search.png', class:"search-logo", alt:"search")%>
+          <%= f.submit '検索する', class:"search-btn-content"%>
+        </div>
+     </div>
+     <% end %>
+  </div>
 </div>
 
 <%= render "shared/footer" %>

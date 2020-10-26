@@ -35,16 +35,6 @@ setTimeout(function(){
       return false;
   });
 
-  $(window).on("resize", function(){
-     var x = $(window).width();
-     var y = 640;
-     if (x < y){
-        $('.twitter-timeline').hide();
-     } else {
-        $('.twitter-timeline').show();
-     }
-  });
-
 setTimeout(function(){
   $('#to-pagedown').fadeIn(2000);
 },1000);

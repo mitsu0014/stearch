@@ -108,9 +108,11 @@ justify-content: center;
   border: #ec6d71;
   border-radius: 30px;
   padding: 20px 40px;
+  -webkit-appearance: none;
   }
 
   .search-btn-content:hover {
+    -webkit-appearance: none;
     cursor: pointer;
     text-decoration: none;
    -webkit-animation: simple_square_btn6 0.5s both;

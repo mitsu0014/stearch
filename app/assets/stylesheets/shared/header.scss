@@ -405,7 +405,7 @@ background-color: #ff9999;
  padding: 8px;
 }
 
-@media screen and (max-width:490px) and(max-width:640px) {
+@media screen and(min-width:481px) and(max-width:640px) {
   .header-list li {
     display: none;
   }
@@ -415,45 +415,31 @@ background-color: #ff9999;
 }
 
 @media screen and (max-width: 480px) { 
-  .header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  opacity: 0.9;
-  width: 100%;
-  height: 200px;
-  align-items: center;
-  background-size: cover;
-  background-blend-mode:lighten;
-  position: absolute;
-  position: fixed;
-  z-index: 9;
-  background-image: image-url('background.jpg');
- }
+  .header-navi-wrap {
+    display: none;
+  }
 
- .data-menu-toggle {
-  width: 90px;
-  margin-top: 40px;
-  margin-left: 30px;
-  cursor: pointer;
- }
+  .data-menu-toggle {
+    width: 40px;
+    margin-top: 12px;
+    margin-left: 5px;
+   }
 
- .header-logo {
-  width: 210px;
-  height: 105px;
-  margin: 10px 0 10px 170px;
-}
+  .header-logo {
+    width: 65px;
+    height: 30px;
+    margin: 10px 0 10px 80px;
+  }
 
 .header-list li {
   background-color: #ec6d71;
-  padding: 30px 20px 20px 20px;
-  margin: 15px 32px 15px 15px;
-  height: 100px;
-  width: 150px;
+  padding: 13px 0 0 0;
+  margin: 5px 10px 5px 0px;
+  height: 50px;
+  width: 75px;
   z-index: 10;
   border: solid 3px white;
-  font-size: 22px;
+  font-size: 12px;
 }
 
 .header-navi {
@@ -462,7 +448,7 @@ background-color: #ff9999;
   top: 150px;
   z-index: 11;
   right: 60px;
-  // display: none;
+  display: none;
 }
 
 .navi-under {
@@ -470,11 +456,50 @@ background-color: #ff9999;
   font-size: 14px;
   background-color: yellowgreen;
   color: white;
-  padding: 260px 15px 15px 15px;
+  padding: 260px 30px 15px 30px;
   top: 20px;
-  right: 28px;
+  right: 16px;
   border-radius: 20px;
   display: none;
  }
+
+ .guest-login {
+  text-decoration: none;
+  background-color: white;
+ border-radius: 10px;
+ padding: 5px;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 260px;
+  height: auto;
+  text-align: center;
+}
+
+.modal-text {
+  display: inline-block;
+  padding: 14px 10px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-bottom: 10px;
+}
+.sns-btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.sns-btn li {
+  padding: 10px 0;
+}
 
 }

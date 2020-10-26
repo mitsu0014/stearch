@@ -151,3 +151,10 @@ padding: 50px;
     width: 70vw;
     max-width: none;
   }
+
+  @media screen and (max-width:640px) {
+    .show-image {
+      margin-bottom: 20px;
+      width: 60vw;
+    }
+  }

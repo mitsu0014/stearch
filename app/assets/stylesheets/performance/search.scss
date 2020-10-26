@@ -133,3 +133,37 @@
     margin:0 auto;
   }
 }
+
+@media screen and (max-width:640px) {
+  .results {
+    width: 70vw;
+  }
+
+  .result-content {
+    padding: 20px 10px 0 0px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow-x: scroll;
+  }
+
+
+  .link-btn {
+    position: absolute;
+    bottom: 200px;
+    left: 125px;
+   }
+
+   .search-image {
+   width: 120px;
+   height: 150px;
+   padding-right: 10px;
+   margin-bottom: 10px;
+  }
+
+  .result-wrap {
+    font-size: 16px;
+    color: #555555;
+    display: flex;
+  }
+}

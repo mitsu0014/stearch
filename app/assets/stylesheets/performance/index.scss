@@ -287,16 +287,15 @@ justify-content: center;
 }
 
 .search-btn-content {
-	display: block;
-	position: relative;
-	width: 160px;
-	padding: 0.8em;
-	text-align: center;
-	text-decoration: none;
-	color: white;
-	background: #ec6d71;
+  text-decoration: none;
+  background-color: #ec6d71;
+  color: white;
+  opacity: 0.8;
   border-radius: 30px;
-	border:1px solid #ec6d71;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 

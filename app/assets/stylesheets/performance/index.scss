@@ -262,6 +262,7 @@ justify-content: center;
 }
 
 @media screen and (max-width:480px) {
+
 .topimage-btn-wrap {
   margin-bottom: 180px;
 }
@@ -286,7 +287,7 @@ justify-content: center;
   margin: 0 0 10px 48px;
 }
 
-.search-btn-content {
+#search-btn-today {
   text-decoration: none;
   background-color: #ec6d71;
   color: white;
@@ -296,6 +297,22 @@ justify-content: center;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.search-btn-content {
+  text-decoration: none;
+  background-color: #ec6d71;
+  color: white;
+  opacity: 0.8;
+  border-radius: 30px;
+  padding: 20px 40px;
+}
+.search-btn-content:hover {
+  cursor: pointer;
+}
+
+#search-btn-today:hover {
+  cursor: pointer;
 }
 
 

@@ -71,8 +71,9 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 ●アプリケーションサーバー（Unicorn）  
 ●Webサーバー（Nginx）  
 ●データベース（mariaDB）  
-●自動デプロイ（Capistrano） 
+●自動デプロイ（Capistrano3）  
 ●レスポンシブ(PCウィンドウ,スマホ)  
+ <img src="https://user-images.githubusercontent.com/70260498/97248821-ecd31a80-1845-11eb-8688-da9ed7dd4dfc.jpeg" width=50%>  
 
 ## 🌐 ER
 <p align="center">

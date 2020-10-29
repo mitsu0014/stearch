@@ -81,14 +81,12 @@
         <%= link_to 'マイページ',"/users/#{current_user.id}", class: "user-nickname" %>
       </li>
     <% else %>
-    <li class="header-guest">
       <%= link_to 'ゲスト様' , user_guest_sign_in_path, class:"guest-login" , method: :post %>
-     </li>
       <li class="header-login">     
-        <div class="login login-show">ログイン</div>
+        <div class="login login-show header-btn">ログイン</div>
       </li>
       <li class="header-new">
-        <div class="sign-up signup-show">新規登録</div>
+        <div class="sign-up signup-show header-btn">新規登録</div>
       </li>
     <% end %>
     <div class="header-navi-wrap">

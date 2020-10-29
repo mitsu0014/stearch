@@ -99,7 +99,7 @@ font-size: 30px;
 margin-top: 10px;
 display: flex;
 justify-content: center;
-}
+}z
 
 
 #search-btn-today {
@@ -182,6 +182,7 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
    }
 
    .topimage-btn-wrap {
@@ -202,9 +203,6 @@ justify-content: center;
   flex-direction: column;
 }
 
-  .top-image {
-    display: none;
-  }
 
   .sub-text {
     display: none;

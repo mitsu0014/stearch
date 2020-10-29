@@ -9,7 +9,7 @@ $(function() {
     $('#signup-modal').fadeOut();
   });
 
- $('#top-image').fadeIn(3000);
+ $('.today-search').fadeIn(3000);
 
  setTimeout(function(){
   $('#sub-text').fadeIn(2000);

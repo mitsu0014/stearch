@@ -108,7 +108,14 @@ background-color: #ff9999;
   cursor: pointer;
 }
 
-
+@keyframes header-navi {
+  0% {
+      -webkit-transform: rotate(0);
+  }
+  100% {
+      -webkit-transform: rotateY(360deg);
+  }
+}
 
 .header-navi {
   position: absolute;
@@ -116,17 +123,8 @@ background-color: #ff9999;
   top: 83px;
   z-index: 11;
   right: 50px;
-  -webkit-animation: 3s linear infinite header-navi;
+  animation: 3s linear infinite header-navi;
   display: none;
-}
-
-@-webkit-keyframes header-navi {
-    0% {
-        -webkit-transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: rotateY(360deg);
-    }
 }
 
 .navi-under {

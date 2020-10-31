@@ -75,10 +75,10 @@
    <ul class="header-list">
     <% if user_signed_in? %>
       <li class="header-login">
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout" %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout header-btn" %>
       </li>
       <li class="header-new">
-        <%= link_to 'マイページ',"/users/#{current_user.id}", class: "user-nickname" %>
+        <%= link_to 'マイページ',"/users/#{current_user.id}", class: "user-nickname header-btn" %>
       </li>
     <% else %>
       <%= link_to 'ゲスト様' , user_guest_sign_in_path, class:"guest-login" , method: :post %>

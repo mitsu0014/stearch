@@ -21,6 +21,7 @@ default: &default
 
 development:
   <<: *default
+  socket: /tmp/mysql.sock
   database: stearch_development
 
 # Warning: The database defined as "test" will be erased and

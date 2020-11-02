@@ -15,7 +15,7 @@ RSpec.describe 'Performances', type: :system do
   end
 
   it 'ログインしたユーザーは公演を登録できる' do
-    basic_pass root_path
+    visit root_path
     expect(page).to have_content('ログイン')
     visit new_user_session_path
     fill_in 'メールアドレス', with: @user.email

@@ -14,7 +14,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
   end
   context 'ユーザー新規登録ができるとき' do
     it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
-      basic_pass root_path
+      visit root_path
       expect(page).to have_content('新規登録')
       visit new_user_registration_path
       fill_in 'ユーザーネーム', with: @user.nickname
@@ -32,7 +32,7 @@ RSpec.describe 'ユーザー新規登録', type: :system do
   end
   context 'ユーザー新規登録ができないとき' do
     it '誤った情報ではユーザー新規登録ができずに新規登録ページへ戻ってくる' do
-      basic_pass root_path
+      visit root_path
       expect(page).to have_content('新規登録')
       visit new_user_registration_path
       fill_in 'ユーザーネーム', with: ''
@@ -53,7 +53,7 @@ RSpec.describe 'ログイン', type: :system do
   end
   context 'ログインができるとき' do
     it '保存されているユーザーの情報と合致すればログインができる' do
-      basic_pass root_path
+      visit root_path
       expect(page).to have_content('ログイン')
       visit new_user_session_path
       fill_in 'メールアドレス', with: @user.email
@@ -67,7 +67,7 @@ RSpec.describe 'ログイン', type: :system do
   end
   context 'ログインができないとき' do
     it '保存されているユーザーの情報と合致しないとログインができない' do
-      basic_pass root_path
+      visit root_path
       expect(page).to have_content('ログイン')
       visit new_user_session_path
       fill_in 'メールアドレス', with: ''

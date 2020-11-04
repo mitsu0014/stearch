@@ -1,0 +1,36 @@
+<%= render "shared/header" %>
+<div class="sign-up-content">
+  <div class="sign-up-title">
+    <h2>問い合わせフォーム</h2>
+  </div>
+
+  <%= form_with url: inquiries_path, model: @inquiry, local: true do |f| %>
+    <%= render "shared/error_messages", model: f.object %>
+
+  <div class="field">
+    <div class="form-text-wrap">
+    <%= f.label :お名前,class:'form-text'%><br>
+    <%= f.text_field :name%><br>
+    </div>
+    </div>
+      <div class="field">
+    <div class="form-text-wrap">
+    <%= f.label :内容,class:'form-text'%><br>
+    <%= f.text_area :message%><br>
+        </div>
+    </div>
+      <div class="field">
+       <div class="form-text-wrap">
+    <%= f.label :返信用アドレス,class:'form-text'%><br>
+    <%= f.text_field :email%><br>
+        </div>
+    </div>
+    <div class="actions">
+    <%= f.submit '送信', class:"sign-up-btn" %>
+    </div>
+  <% end %>
+      <%= link_to 'トップページにもどる', root_path, class:"back-home" %>
+  </div>
+</div>
+
+  <%= render "shared/footer" %>

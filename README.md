@@ -80,7 +80,7 @@ Stearch!は、ユーザーの「急に時間が空いてしまった」「近く
 
 ## 🌐 ER
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/70260498/97265524-23bb2780-186a-11eb-9ab8-34433eade645.png" width=70%>  
+  <img src="https://user-images.githubusercontent.com/70260498/98074067-ff37fe80-1eac-11eb-9d02-370a61ba0f02.png" width=70%>  
 </p>
 
 ## 🌐 インフラ構成図

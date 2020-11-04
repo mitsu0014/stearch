@@ -3,6 +3,7 @@ ja:
     models:
       user: ユーザー
       performance:  公演
+      inquiry: 問い合わせ
     attributes:
       user:
         name: 名前
@@ -20,3 +21,5 @@ ja:
         end_date: 終演日
         start_at: 開演時間の詳細
         url: 購入手続き先
+      inquiry:
+        message: 送信する内容

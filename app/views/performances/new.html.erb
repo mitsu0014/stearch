@@ -65,12 +65,12 @@
         <label for="genre-name">ジャンル</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
-      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"genre-name"}) %>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"new-select-box", id:"genre-name"}) %>
       <div class="weight-bold-text">
          <label for="area-name">エリア（東京都）</label>
         <span class="indispensable-new-performance">必須</span>
       </div>
-      <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"area-name"}) %>
+      <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"new-select-box", id:"area-name"}) %>
     </div>
     <%# /ActiveHash %>
     <%# チケット料金 %>
